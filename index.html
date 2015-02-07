@@ -15,9 +15,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
 	<link rel="stylesheet" href="style.css">
-
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 	
 	<title>Linnéa Mellblom</title>
 </head> 
@@ -28,9 +30,100 @@
 			<img class="img-circle" style="vertical-align: text-bottom;" height="100px" src="pics/linnea.jpg" alt="Linnéa"> 
 			Linnéa Mellblom
 		</h1>
-		<p> Studerar Civilingenjör Medieteknik på LiU. </p>
-		<p class="text-warning"> Denna sida är för tillfället under uppbyggnad. Stay tuned! </p>
+		<!--<p><b>Utbildning  Projekt  Kontakt</b></p>-->
+		<p><em>Studerar Civilingenjör i Medieteknik på Linköpings Universitet. Examen 2016. </em></p> 
+		<br>
+		<br>
+		<div id ="frontPageImg">
+			<a href="#fire" data-toggle="scrollDown"><img class="img-circle" src="pics/project/fire.png" alt="Fire"></a>
+			<a href="#qr" data-toggle="scrollDown"><img class="img-circle" src="pics/project/qrCodes.png" alt="Qr"></a>
+			<a href="#creatureEvolution" data-toggle="scrollDown"><img class="img-circle" src="pics/project/creatureEvolution.png" alt="creatureEvolution"></a> 
+			<a href="#curling" data-toggle="scrollDown"><img class="img-circle" src="pics/project/curling_kvadrat.png" alt="Space Curling"></a> 
+			<a href="#tatzy" data-toggle="scrollDown"><img class="img-circle" src="pics/project/tatzy_kvadrat.png" alt="Tatzy"></a> 
+		</div>
+		<a href="#wrapper-project" class="downButton hidden-xs" data-toggle="scrollDown">
+				<span class="glyphicon glyphicon-chevron-down"></span>
+		</a>
 	</div>
+	<div class="content">
+
+		<div id="wrapper-project">
+			<div class="header">
+				PROJEKT
+			</div>
+			<div class="project even">
+				<img class="img-circle" src="pics/project/fire.png" alt="Fire" id="fire"> 
+				<h2>"I see fire"</h2>
+				<p class="keyWords">Procedurella metoder för bilder, GLSL, WebGL</p>
+				<p>Projekt i kursen <em>Procedurella metoder för bilder</em>. Använda olika sorts noise-funktioner för att skapa något procedurellt. Valde att försöka ge mig på procedurell eld. Resultatet kan ses <a href="http://lmellblom.github.io/fire-webGL">här</a>.</p>
+			</div>
+			<div class="project odd" id="qr">
+				<img class="img-circle" src="pics/project/qrCodes.png" alt="Qr"> 
+				<h2>Qr code processing</h2>
+				<p class="keyWords">Avancerad bildbehandling, MATLAB</p>
+				<p>Ett projekt i kursen <em>Avancerad Bilbehandling</em>. Skulle lokalisera en QR kod i en bild och sedan avkoda meddelandet. Projektet var begränsat till version 6 av QR versioner men även att QR koden lästes av horisontellt från vänster till höger i bilden. Finns på <a href="https://github.com/lmellblom/QR-code" target="_blank">GitHub</a>. </p>
+			</div>
+
+			<div class="project even" id="creatureEvolution">
+				<img class="img-circle" src="pics/project/creatureEvolution.png" alt="creatureEvolution"> 
+				<h2>Creature Evolution</h2>
+				<p class="keyWords">Kandidatarbete, Agil utveckling, C++, OpenGL, Qt</p>
+				<p>Creature Evolution utvecklades under Medietekniskt kandidatprojekt. Varelserna är evolverade med genetiska algoritmer och använder ett neuralt nätverk som hjärna. Deras beteende är det ända som utvecklas och kan sättas av användaren. Man kan också välja olika varelser att utveckla. Produkten är inspirerad av arbete av Karl Sims. 
+				Progammet är utvecklat i C++ med OpenGl för grafik. Bullet användes för fysikalisk simulation och Qt för GUI. Finns på <a href="https://github.com/kbladin/creature_evolution" target="_blank">GitHub</a>.</p>
+			</div>
+
+			<div class="project odd" id="curling">
+				<img class="img-circle" src="pics/project/curling_kvadrat.png" alt="Space Curling"> 
+				<h2>Space Curling</h2>
+				<p class="keyWords">Modellering och simulering, WebGL, JavaScript</p>
+				<p>Ett curlingspel för två spelare. Gjort i WebGL och JavaScript. Modellerna är gjorda i Blender. Som spelare väljer du utslagsvinkel och hastighet. Spelet tar hänsyn till friktion, krock, rotation mm. Curlingstenens bana är grundande på fysikaliska samband. Finns på <a href="https://github.com/lmellblom/MoS_Projekt" target="_blank">GitHub</a></p>
+			</div>
+
+			<div class="project project-last even" id="tatzy">
+				<img class="img-circle" src="pics/project/tatzy_kvadrat.png" alt="Tatzy"> 
+				<h2>Tatzy</h2>
+				<p class="keyWords">Kommunikation och användargränssnitt, Java</p>
+				<p>Ett yatzy-spel som är kodat i Java. Går ut på att få så många poäng som möjligt. Efter ett tärningskast är det upp till spelaren att välja vart poängen ska hamna. För att underlätta för spelaren så räknar spelet även ut den potentiella poängen i varje kategori.</p>
+			</div>
+
+		</div>
+
+		<div id="wrapper-kontakt">
+			<div class="header">
+				KONTAKT
+			</div>
+			<div class="contact-content">
+				<p> Du är så välkommen att höra av dig om du undrar över något.</p>
+				<br>
+				<div class="kontakt">
+					<a href="http://www.github.com/lmellblom" target="_blank">
+						<img height="40" src="icons/github_black.png" alt="GitHub">
+					</a>
+				</div>
+				<div class="kontakt">
+					<a href="https://www.linkedin.com/pub/linn%C3%A9a-mellblom/a3/909/241" target="_blank">
+						<img height="45" src="icons/linkedin_round.svg" alt="LinkedIn">
+					</a>
+				</div>
+				<div class="kontakt">
+					<a href="mailto:linnea@mellblom.nu?Subject=Hello" target="_blank">
+						<img height="50" src="icons/mail.svg" alt="Mail">
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+    <!-- Handle the scrolling down smooth -->
+	<script>
+		$('a[data-toggle="scrollDown"]').click(function(event){
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop:$(this.hash).offset().top}, 600);
+		});
+	</script>
 
 
 </body>
