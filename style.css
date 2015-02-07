@@ -226,8 +226,15 @@ a.downButton:hover {
     margin: -15% 0 0 -25%;*/
     margin-top: 20%;}
 
+
+@media screen and (max-height: 400px) {
+    #frontPageImg {
+    display: none;
+  }
+}
+
  /* CSS for smaller screens, small changes in layot etc. */ 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 475px) {
   .project img {
 
     float: none !important;
@@ -241,10 +248,6 @@ a.downButton:hover {
   .project p {
         text-align: justify;
 }
-
-  .jumbotron{
-    height: 70%;
-  }
 
   #frontPageImg {
     display: none;
