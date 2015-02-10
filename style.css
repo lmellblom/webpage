@@ -159,10 +159,12 @@ h2 {
     min-height: 100%;
 }
 #wrapper-project .even {
-  background-color: #8D8D8D; /*#48CFAD;*/
+/*  background-color: #8D8D8D; #48CFAD;*/
+  background-color: rgba(0,0,0,0.1);
 }
 #wrapper-project .odd {
-  background-color: #C2C2C2; /*#37BC9B;*/
+ /* background-color: #C2C2C2; #37BC9B;*/
+ background-color: rgba(0,0,0,0.3)
 }
 .project-last {
   margin-bottom: 0px !important;
