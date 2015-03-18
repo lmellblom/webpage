@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-  margin: .67em 0 0.35em 0;
+  margin: 0.0em 0 0.35em 0;
   font-family: 'Josefin Sans', sans-serif !important;
 }
 
@@ -22,6 +22,25 @@ p {
   font-weight: 200;
   margin-top:5px;
   margin-left:5px;
+}
+
+
+.imgHeader {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.jumbotron p {
+  width: 80%;
+  text-align: center;
+  margin: auto auto;
+}
+
+.jumbotron {
+    padding-top: 50px !important;
 }
 
 /* For the text that is about education */
@@ -33,6 +52,7 @@ p {
 }
 #wrapper-utbildning {
     min-height: 100%;
+    height: 
 }
 .utbildning{
   text-align: center;
@@ -82,6 +102,15 @@ h2 {
   padding-top: 10px;
 }
 
+/* The contact on the page */
+#wrapper-om {
+  text-align: center;
+  padding-bottom: 10px;
+  background-color: rgba(238,238,238,1.0) ; /*#eee*/
+  min-height: 100%;
+
+
+} 
 
 /* The contact on the page */
 #wrapper-kontakt {
@@ -111,6 +140,10 @@ h2 {
 
 }
 
+#nav {
+  opacity: 0.5;
+}
+
 #frontPageImg img{
   width: 100px;
   height: 100px;
@@ -123,13 +156,16 @@ h2 {
   margin-bottom: 0px;
   color: inherit;
   background-color: rgba(238,238,238,1.0) ; /*#eee*/
+  /*background-image: url("pics/water.jpg");*/
+
   text-align: center;
-  height: 100%;
+  min-height: 100%;
+
 }
 .jumbotron h1,
 .jumbotron .h1 {
   color: inherit;
-  margin-top: 10%;
+  margin-top: 4%;
 }
 .jumbotron p {
   margin-bottom: 15px;
@@ -235,6 +271,20 @@ a.downButton:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .jumbotron p {
+    width: 80%;
+    text-align: justify;
+      margin: auto auto;
+
+  }
+  .imgHeader {
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
  /* CSS for smaller screens, small changes in layot etc. */ 
 @media screen and (max-width: 475px) {
   .project img {
@@ -244,6 +294,9 @@ a.downButton:hover {
     margin-left: 25%;
     text-align: center;
   }
+
+
+
   .project {
     padding: 20px;
   }

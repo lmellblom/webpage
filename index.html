@@ -21,50 +21,99 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 	
-	<title>Linnéa Mellblom</title>
+	<title>Linnéa Mellblom  - under uppbyggnad</title>
 </head> 
 
-<body>
-	<div class="jumbotron">
+<body data-spy="scroll" data-target=".navbar-default" id="backHome">
+
+
+
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+
+		<div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#backHome" data-toggle="scrollDown" class="navbar-brand">Linnéa Mellblom</a>
+        </div>
+
+	    <div class="collapse navbar-collapse" id="navbarCollapse">
+	      <ul class="nav navbar-nav navbar-right">
+	      	<!--<li><a href="#home" data-toggle="scrollDown">Om mig</a></li>-->
+	        <li><a href="#projekt" data-toggle="scrollDown">Projekt</a></li>
+	        <li><a href="#kontakt" data-toggle="scrollDown">Kontakt</a></li>
+	       </ul>
+	   </div>
+
+    </div>
+</nav>
+
+	<div class="jumbotron" id="home">
+		
 		<h1 class="text-center text-uppercase">
-			<img class="img-circle" style="vertical-align: text-bottom;" height="100px" src="pics/linnea.jpg" alt="Linnéa"> 
-			Linnéa Mellblom
+			
+			<img class="imgHeader img-circle img-responsive" src="pics/linnea.jpg" alt="Linnéa"> 
+		Linnéa Mellblom
 		</h1>
 		<!--<p><b>Utbildning  Projekt  Kontakt</b></p>-->
-		<p><em>Studerar Civilingenjör i Medieteknik på Linköpings Universitet. Examen 2016. </em></p> 
+		<p class="hidden-xs"><em>Studerar Civilingenjör i Medieteknik på Linköpings Universitet. Examen 2016. </em></p> 
+		<p class="visible-xs">Studerar Civilingenjör i Medieteknik på Linköpings Universitet och går nu termin 8 av 10. Har en förkärlek för att hacka kod och lösa problem. 
+			När jag inte studerar så spelas det fotboll! Tveka inte att höra av dig om du undrar över något.</p>
 		<br>
 		<br>
 		<div id ="frontPageImg" class="hidden-xs">
+			<a href="#infoVis" data-toggle="scrollDown"><img class="img-circle" src="pics/project/infoVis.png" alt="InfoVis"></a> 
 			<a href="#fire" data-toggle="scrollDown"><img class="img-circle" src="pics/project/fire.png" alt="Fire"></a>
 			<a href="#qr" data-toggle="scrollDown"><img class="img-circle" src="pics/project/qrCodes.png" alt="Qr"></a>
 			<a href="#creatureEvolution" data-toggle="scrollDown"><img class="img-circle" src="pics/project/creatureEvolution.png" alt="creatureEvolution"></a> 
 			<a href="#curling" data-toggle="scrollDown"><img class="img-circle" src="pics/project/curling_kvadrat.png" alt="Space Curling"></a> 
 			<a href="#tatzy" data-toggle="scrollDown"><img class="img-circle" src="pics/project/tatzy_kvadrat.png" alt="Tatzy"></a> 
 		</div>
-		<a href="#wrapper-project" class="downButton" data-toggle="scrollDown">
+		<a href="#wrapper-project" class="downButton hidden-xs" data-toggle="scrollDown">
 				<span class="glyphicon glyphicon-chevron-down"></span>
 		</a>
 	</div>
 	<div class="content">
 
+	<!--	<div id="wrapper-om">
+			<div id="ommig" class="header">
+				Vem är jag?
+			</div>
+			<div>
+				<p>I framtiden ser jag mig jobba med systemutveckling, gärna inom webb eller visualisering men hittar hela tiden nya områden som är roliga att utforska ytterligare.</p>
+			</diV>
+		</div>
+-->
+
+
 		<div id="wrapper-project">
-			<div class="header">
+			<div id="projekt" class="header">
 				PROJEKT
 			</div>
 			<div class="project even">
+				<img class="img-circle" src="pics/project/infoVis.png" alt="infoVis" id="infoVis"> 
+				<h2>Visualisering av valresultat</h2>
+				<p class="keyWords">Informationsvisualisering, JavaScript, d3</p>
+				<p>Projekt i kursen <em>Informationsvisualisering</em>. Visualisering av Sveriges valresultat 2010. Fokus på att hitta samband mellan valresultatet och andra faktorer såsom befolkning och medelinkomst. Resultatet kan ses <a href="http://lmellblom.github.io/InfoVis-election/">här</a>.</p>
+			</div>
+			<div class="project odd">
 				<img class="img-circle" src="pics/project/fire.png" alt="Fire" id="fire"> 
 				<h2>"I see fire"</h2>
 				<p class="keyWords">Procedurella metoder för bilder, GLSL, WebGL</p>
-				<p>Projekt i kursen <em>Procedurella metoder för bilder</em>. Använda olika sorts noise-funktioner för att skapa något procedurellt. Valde att försöka ge mig på procedurell eld. Resultatet kan ses <a href="http://lmellblom.github.io/fire-webGL">här</a>.</p>
+				<p>Projekt i kursen <em>Procedurella metoder för bilder</em>. Arbetade själv med att skapa procedurell eld med WebGL och GLSL. Resultatet kan ses <a href="http://lmellblom.github.io/fire-webGL">här</a>.</p>
 			</div>
-			<div class="project odd" id="qr">
+			<div class="project even" id="qr">
 				<img class="img-circle" src="pics/project/qrCodes.png" alt="Qr"> 
 				<h2>Qr code processing</h2>
 				<p class="keyWords">Avancerad bildbehandling, MATLAB</p>
 				<p>Ett projekt i kursen <em>Avancerad Bilbehandling</em>. Skulle lokalisera en QR kod i en bild och sedan avkoda meddelandet. Projektet var begränsat till version 6 av QR versioner men även att QR koden lästes av horisontellt från vänster till höger i bilden. Finns på <a href="https://github.com/lmellblom/QR-code" target="_blank">GitHub</a>. </p>
 			</div>
 
-			<div class="project even" id="creatureEvolution">
+			<div class="project odd" id="creatureEvolution">
 				<img class="img-circle" src="pics/project/creatureEvolution.png" alt="creatureEvolution"> 
 				<h2>Creature Evolution</h2>
 				<p class="keyWords">Kandidatarbete, Agil utveckling, C++, OpenGL, Qt</p>
@@ -72,14 +121,14 @@
 				Progammet är utvecklat i C++ med OpenGl för grafik. Bullet användes för fysikalisk simulation och Qt för GUI. Finns på <a href="https://github.com/kbladin/creature_evolution" target="_blank">GitHub</a>.</p>
 			</div>
 
-			<div class="project odd" id="curling">
+			<div class="project even" id="curling">
 				<img class="img-circle" src="pics/project/curling_kvadrat.png" alt="Space Curling"> 
 				<h2>Space Curling</h2>
 				<p class="keyWords">Modellering och simulering, WebGL, JavaScript</p>
-				<p>Ett curlingspel för två spelare. Gjort i WebGL och JavaScript. Modellerna är gjorda i Blender. Som spelare väljer du utslagsvinkel och hastighet. Spelet tar hänsyn till friktion, krock, rotation mm. Curlingstenens bana är grundande på fysikaliska samband. Finns på <a href="https://github.com/lmellblom/MoS_Projekt" target="_blank">GitHub</a></p>
+				<p>Ett curlingspel för två spelare. Gjort i WebGL och JavaScript. Modellerna är gjorda i Blender. Som spelare väljer du utslagsvinkel och hastighet. Spelet tar hänsyn till friktion, krock, rotation mm. Curlingstenens bana är grundande på fysikaliska samband. Koden kan kikas på <a href="https://github.com/lmellblom/MoS_Projekt" target="_blank">GitHub</a>. Live-demo finns på <a href="http://lmellblom.github.io/MoS_Projekt" target="_blank">denna sida</a></p>
 			</div>
 
-			<div class="project project-last even" id="tatzy">
+			<div class="project project-last odd" id="tatzy">
 				<img class="img-circle" src="pics/project/tatzy_kvadrat.png" alt="Tatzy"> 
 				<h2>Tatzy</h2>
 				<p class="keyWords">Kommunikation och användargränssnitt, Java</p>
@@ -89,7 +138,7 @@
 		</div>
 
 		<div id="wrapper-kontakt">
-			<div class="header">
+			<div id="kontakt" class="header">
 				KONTAKT
 			</div>
 			<div class="contact-content">
@@ -121,8 +170,10 @@
 		$('a[data-toggle="scrollDown"]').click(function(event){
 			event.preventDefault();
 			$('html,body').animate({
-				scrollTop:$(this.hash).offset().top}, 600);
+				scrollTop:$(this.hash).offset().top-50}, 600); // minus 50 pga menun som sittar fast! kanske kan ändra på ngt sätt??
 		});
+
+		$('body').scrollspy({ target: '.navbar-default' })
 	</script>
 
 
