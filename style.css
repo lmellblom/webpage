@@ -112,6 +112,28 @@ h2 {
 
 } 
 
+#wrapper-kurser {
+    text-align: center;
+  padding-bottom: 10px;
+  background-color: rgba(238,238,238,1.0) ; /*#eee*/
+  min-height: 100%;
+}
+
+.courses div{
+  text-align: left;
+  font-weight: 200;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.42857143;
+  padding: 10px 0px;
+}
+.kurser-content {
+  padding: 20px 50px;
+  overflow: hidden;
+  margin-bottom: 0px;
+  text-align: justify;
+}
+
 /* The contact on the page */
 #wrapper-kontakt {
   text-align: center;
@@ -128,6 +150,7 @@ h2 {
 .kontakt {
   text-align: center;
 }
+
 /*
 .kontakt img {
   width: 45px;
@@ -262,7 +285,10 @@ a.downButton:hover {
     left: 50%;
     width: 50%;
     margin: -15% 0 0 -25%;*/
-    margin-top: 20%;}
+    margin-top: 20%;
+    padding: 0px 50px;
+
+  }
 
 
 @media screen and (max-height: 400px) {

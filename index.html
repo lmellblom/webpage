@@ -45,6 +45,7 @@
 	      <ul class="nav navbar-nav navbar-right">
 	      	<!--<li><a href="#home" data-toggle="scrollDown">Om mig</a></li>-->
 	        <li><a href="#projekt" data-toggle="scrollDown">Projekt</a></li>
+	       	<li><a href="#kurser" data-toggle="scrollDown">Kurser</a></li>
 	        <li><a href="#kontakt" data-toggle="scrollDown">Kontakt</a></li>
 	       </ul>
 	   </div>
@@ -97,8 +98,8 @@
 			<div class="project even">
 				<img class="img-circle" src="pics/project/infoVis.png" alt="infoVis" id="infoVis"> 
 				<h2>Visualisering av valresultat</h2>
-				<p class="keyWords">Informationsvisualisering, JavaScript, d3</p>
-				<p>Projekt i kursen <em>Informationsvisualisering</em>. Visualisering av Sveriges valresultat 2010. Fokus på att hitta samband mellan valresultatet och andra faktorer såsom befolkning och medelinkomst. Resultatet kan ses <a href="http://lmellblom.github.io/InfoVis-election/">här</a>.</p>
+				<p class="keyWords">Informationsvisualisering, JavaScript, d3.js</p>
+				<p>Projekt i kursen <em>Informationsvisualisering</em>. Visualisering av Sveriges valresultat 2010. Fokus på att hitta samband mellan valresultatet och andra faktorer såsom befolkning och medelinkomst. Resultatet kan ses <a href="http://lmellblom.github.io/InfoVis-election/">här</a>. Projektet gjordes i en grupp om två. Använde JavaScript och biblioteket d3.js.  OBS! För tillfället kan endast projektet ses i Firefox. </p> 
 			</div>
 			<div class="project odd">
 				<img class="img-circle" src="pics/project/fire.png" alt="Fire" id="fire"> 
@@ -110,7 +111,7 @@
 				<img class="img-circle" src="pics/project/qrCodes.png" alt="Qr"> 
 				<h2>Qr code processing</h2>
 				<p class="keyWords">Avancerad bildbehandling, MATLAB</p>
-				<p>Ett projekt i kursen <em>Avancerad Bilbehandling</em>. Skulle lokalisera en QR kod i en bild och sedan avkoda meddelandet. Projektet var begränsat till version 6 av QR versioner men även att QR koden lästes av horisontellt från vänster till höger i bilden. Finns på <a href="https://github.com/lmellblom/QR-code" target="_blank">GitHub</a>. </p>
+				<p>Ett projekt i kursen <em>Avancerad Bilbehandling</em>. Skulle lokalisera en QR kod i en bild och sedan avkoda meddelandet. Projektet var begränsat till version 6 av QR versioner men även att QR koden lästes av horisontellt från vänster till höger i bilden. Finns på <a href="https://github.com/lmellblom/QR-code" target="_blank">GitHub</a>. Projektet gjordes tillsammans med tre andra. Jag arbetade mest med att arbeta fram algoritmen och kodade i Matlab. </p>
 			</div>
 
 			<div class="project odd" id="creatureEvolution">
@@ -118,23 +119,71 @@
 				<h2>Creature Evolution</h2>
 				<p class="keyWords">Kandidatarbete, Agil utveckling, C++, OpenGL, Qt</p>
 				<p>Creature Evolution utvecklades under Medietekniskt kandidatprojekt. Varelserna är evolverade med genetiska algoritmer och använder ett neuralt nätverk som hjärna. Deras beteende är det enda som utvecklas och kan sättas av användaren. Man kan också välja olika varelser att utveckla. Produkten är inspirerad av arbete av Karl Sims. 
-				Progammet är utvecklat i C++ med OpenGl för grafik. Bullet användes för fysikalisk simulation och Qt för GUI. Demo finns på <a href="http://youtu.be/TI1YTttK8m8" target="_blank">youtube</a>. Koden kan kikas på <a href="https://github.com/kbladin/creature_evolution" target="_blank">GitHub</a>.</p>
+				Progammet är utvecklat i C++ med OpenGl för grafik. Bullet användes för fysikalisk simulation och Qt för GUI. Demo finns på <a href="http://youtu.be/TI1YTttK8m8" target="_blank">youtube</a>. Koden kan kikas på <a href="https://github.com/kbladin/creature_evolution" target="_blank">GitHub</a>. I projektet hade jag mer ansvar för genetiska algoritmer och kodade i C++. </p>
 			</div>
 
 			<div class="project even" id="curling">
 				<img class="img-circle" src="pics/project/curling_kvadrat.png" alt="Space Curling"> 
 				<h2>Space Curling</h2>
 				<p class="keyWords">Modellering och simulering, WebGL, JavaScript</p>
-				<p>Ett curlingspel för två spelare. Gjort i WebGL och JavaScript. Modellerna är gjorda i Blender. Som spelare väljer du utslagsvinkel och hastighet. Spelet tar hänsyn till friktion, krock, rotation mm. Curlingstenens bana är grundande på fysikaliska samband. Koden kan kikas på <a href="https://github.com/lmellblom/MoS_Projekt" target="_blank">GitHub</a>. Live-demo finns på <a href="http://lmellblom.github.io/MoS_Projekt" target="_blank">denna sida</a></p>
+				<p>Ett curlingspel för två spelare. Gjort i WebGL och JavaScript. Modellerna är gjorda i Blender. Som spelare väljer du utslagsvinkel och hastighet. Spelet tar hänsyn till friktion, krock, rotation mm. Curlingstenens bana är grundande på fysikaliska samband. Koden kan kikas på <a href="https://github.com/lmellblom/MoS_Projekt" target="_blank">GitHub</a>. Live-demo finns på <a href="http://lmellblom.github.io/MoS_Projekt" target="_blank">denna sida</a>. Ansvarade en del för uppbyggnaden av JavaScript-koden och hur detta skulle vara uppbyggt.</p>
 			</div>
 
 			<div class="project project-last odd" id="tatzy">
 				<img class="img-circle" src="pics/project/tatzy_kvadrat.png" alt="Tatzy"> 
 				<h2>Tatzy</h2>
 				<p class="keyWords">Kommunikation och användargränssnitt, Java</p>
-				<p>Ett yatzy-spel som är kodat i Java. Går ut på att få så många poäng som möjligt. Efter ett tärningskast är det upp till spelaren att välja vart poängen ska hamna. För att underlätta för spelaren så räknar spelet även ut den potentiella poängen i varje kategori.</p>
+				<p>Ett yatzy-spel som är kodat i Java. Går ut på att få så många poäng som möjligt. Efter ett tärningskast är det upp till spelaren att välja vart poängen ska hamna. För att underlätta för spelaren så räknar spelet även ut den potentiella poängen i varje kategori. Svåra var att ta fram en struktur för hur man räknar ut poäng och strukturera upp spelet.</p>
 			</div>
 
+		</div>
+
+
+		<div id="wrapper-kurser">
+			<div id="kurser" class="header">KURSER</div>
+			<div class="kurser-content">
+				<p>Innehar en kandidatexamen i Medieteknik sedan 2014. Dessa kurser har jag läst under min studietid hittils: </p>
+				<div class="container-fluid">
+<!--<p class="kurserna">-->
+<div class="row courses">
+<div class="col-xs-12 .col-sm-4 col-md-4">TNA001        Matematisk grundkurs</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNA002        Linjär Algebra</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TND012        Programmering grundkurs</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM088        Digitala Medier</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNMK30        Elektronisk Publicering</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNA003        Analys I</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TND002        Objektorienterad programmering</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TND005        Tillämpad matematik i teknik och naturvetenskap</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNA004        Analys II</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM046        Datorgrafik</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNA006        Analys III</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM040        Kommunikation och användargränssnitt</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNA007        Vektoranalys</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNE043        Mekanik och vågfysik</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM042        Design</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNG032        Tillämpad transformteori</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNG033        Programmering i C++</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNG006        Matematisk statistik</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNG015        Signaler och system</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM061        3-D Datorgrafik</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNG028        Reglerteknik</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM059        Grafisk Teknik</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNG022        Modellbygge och simulering</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM087        Bildbehandling och bildanalys</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM093        Tillämpad visualisering och virtuell verklighet</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM085        Modelleringsprojekt</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TND004        Datastrukturer</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM094        Medietekniskt kandidatprojekt</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM031        Nätverksprogrammering och säkerhet</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TDDB84        Designmönster</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM034        Avancerad bildbehandling</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM091        Mediaproduktion för immersiva miljöer</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM084        Procedurella metoder för bilder</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM084        Informationvisualisering</div>
+<div class="col-xs-12 .col-sm-4 col-md-4">TNM069        Grafisk Design och Kommunikation</div>
+</div>
+</div>
+			</div>
 		</div>
 
 		<div id="wrapper-kontakt">
@@ -142,7 +191,7 @@
 				KONTAKT
 			</div>
 			<div class="contact-content">
-				<p> Du är så välkommen att höra av dig om du undrar över något.</p>
+				<p> Det är bara att höra av dig till <a href="mailto:linnea@mellblom.nu?Subject=Hello" target="_blank">min mail</a> om du undrar över något. Kika gärna in annars på <a href="http://www.github.com/lmellblom" target="_blank">GitHub</a> eller på min <a href="https://www.linkedin.com/pub/linn%C3%A9a-mellblom/a3/909/241" target="_blank">LinkedIn</a>.</p>
 				<br>
 				<div class="kontakt">
 					<a href="http://www.github.com/lmellblom" target="_blank">
