@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- More nicer colors -->
+	<link rel=stylesheet href="node_modules/colors.css/css/colors.min.css">
+
+	<!-- Bootstrap stuff! -->
+	<link rel="stylesheet" href="css/paper-bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+	<!-- Angular -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+	
+	<!-- Nice icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+
+	<!-- My custom css for this site -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<title>Linnéa Mellblom</title>
+</head> 
+
+<body ng-app="cvInfo" ng-controller="cvCtrl">
+
+	<div class="bigHeader">
+		<h1 class="js-fht upperCase">CV Linnéa Mellblom</h1>
+		<h2 class="js-fht italicTrans upperCase">Studerar Civilingenjör i Medieteknik på Linköpings Universitet. Examen 2016.</h2>
+	</div>
+
+	<!-- just for fun. soon to be civilingenjör -->
+	<div class="progress">
+  		<div class="progress-bar progress-bar-striped progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+    		<span class="sr-only">80% Complete (success)</span>
+  		</div>
+	</div>
+
+	<!--<div id="linkMenu">
+		<a href="#wrapperDescription" data-toggle="scrollDown">Om mig</a> 
+		<a href="#education" data-toggle="scrollDown">Utbildning</a> 
+		<a href="#work" data-toggle="scrollDown">Arbeten</a> 
+		<a href="#otherCommitments" data-toggle="scrollDown">Commitments</a> 
+		<a href="#skills" data-toggle="scrollDown">Skills</a> 
+		<a href="#languages" data-toggle="scrollDown">Språk</a> 
+		
+	</div>-->
+
+	<div class="aboutIcons">
+		<i class="fa fa-3x fa-diamond"></i> 
+		<i class="fa fa-3x fa-futbol-o"></i> 
+		<i class="fa fa-3x fa-code"></i> 
+		<i class="fa fa-3x fa-heart"></i> 
+		<i class="fa fa-3x fa-laptop"></i> 
+	</div>
+
+	<div class="content">
+
+
+		<div id="wrapperDescription">
+			<div class="row"> <!-- wrapper to add the description and the person info side-->
+				<div class="col-sm-4" id="personalInformation">
+
+					<img class="img-responsive img-circle" ng-src="{{imageOfMeSrc}}" alt="Linnéa">
+
+					<span class="hidden"><h4><i class="fa fa-female"></i> {{personalInformation.header}}</h4>
+
+					<div class="row" ng-repeat="item in personalInformation">
+						<div class="col-xs-3"><b>{{item.head}}:</b></div>
+						<div class="col-xs-9">{{item.text}}</div>
+					</div></span>
+				</div>				
+
+				<div class="col-sm-8" id="infoMe">
+					<h4><i class="fa fa-comment-o"></i> {{me.header}}</h4>
+					<p>{{me.description}}</p>
+
+				</div>
+			</div> 
+		</div><!-- end wrapper first section -->
+
+		<hr>
+
+		<div id="education">
+			<h4><i class="fa fa-graduation-cap"></i> {{education.header}}</h4>
+
+			<div ng-repeat="item in education" class="row">
+				<div class="col-xs-3">{{item.when}}</div>
+				<div class="col-xs-9 dividerLeft">{{item.title}}, {{item.university}} <i>{{item.city}}</i></div>
+				
+			</div> 
+
+		</div>
+
+		<hr>
+
+		<div id="work">
+			<h4><i class="fa fa-briefcase"></i> {{work.header}}</h4>
+
+			<div ng-repeat="item in work" class="row workItem">
+
+				<div class="col-xs-3">
+					{{item.when}}
+				</div>
+
+				<div class="col-xs-9 dividerLeft">
+					<h5>{{item.head}}</h5>
+					<p>{{item.text}}</p>
+					
+					<p>{{item.company}}, <i>{{item.city}}</i></p>
+				</div>
+
+			</div>
+
+		</div>
+
+		<hr>
+
+		<div id="otherCommitments">
+			<h4><i class="fa fa-hand-paper-o"></i> {{otherCommitments.header}} </h4>
+			<div ng-repeat="item in otherCommitments">
+				<h5>{{item.head}} {{item.when}}</h5>
+				<p>{{item.text}}</p>
+
+			</div>
+
+		</div>
+
+		<hr>
+
+		<div id="skills">
+			<h4><i class="fa fa-rocket"></i> {{skills.header}}</h4>
+			<div class="row">
+				<div class="col-sm-3 col-xs-6" ng-repeat="item in skills">
+					{{item.head}}
+					<div class="progress">
+	  					<div class="progress-bar progress-bar-striped progress-bar-{{item.level}}" role="progressbar" aria-valuenow="{{item.percent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.percent}}%">
+	    				<span class="sr-only">{{item.percent}}% Complete ({{item.level}})</span>
+	  					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<div id="languages">
+			<h4><i class="fa fa-globe"></i> Språk</h4>
+
+			<div class="circle" ng-repeat="item in languages" ng-mouseenter="mouseOverLang(item)" ng-mouseleave="mouseOverLeve(item)">
+				{{item.languageText}}
+			</div>
+
+		</div>
+
+		<hr>
+
+
+		<div>
+			<h4>Övrigt</h4>
+			<p>Om du vill ha mitt CV som <i class="fa fa-file-pdf-o"> pdf</i>, så är det bara att du höra av dig till <a href="mailto:linnea@mellblom.nu?Subject=Hello" target="_blank"><i class="fa fa-envelope-o"></i> min mail</a> och gärna om du undrar över något annat. Kika gärna in annars på <a href="http://www.github.com/lmellblom" target="_blank"><i class="fa fa-github"></i> GitHub</a> eller på min <a href="https://www.linkedin.com/pub/linn%C3%A9a-mellblom/a3/909/241" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>.</p> 
+			<p>Gå gärna in på min hemsidan, <a href="http://www.linneamellblom.se" target="_blank"><i class="fa fa-home"></i> linneamellblom.se</a> där du kan läsa mer om mina projekt och annat jag har för mig!</p>
+				
+				<!--<br>
+				<div class="kontakt">
+					<a href="http://www.github.com/lmellblom" target="_blank">
+						<img height="40" src="icons/github_black.png" alt="GitHub">
+					</a>
+				</div>
+				<div class="kontakt">
+					<a href="https://www.linkedin.com/pub/linn%C3%A9a-mellblom/a3/909/241" target="_blank">
+						<img height="45" src="icons/linkedin.png" alt="linked">
+					</a>
+				</div>
+				<div class="kontakt">
+					<a href="mailto:linnea@mellblom.nu?Subject=Hello" target="_blank">
+						<img height="50" src="icons/mail.svg" alt="Mail">
+					</a>
+				</div>-->
+
+				<h5 class="js-fht upperCase">Tack och hej!</h5>
+		</div>
+
+
+
+	</div>
+
+
+	<!-- Get angular data -->
+	<script type="text/javascript" src="cvInfo.js"></script>
+
+	<!-- Handle the text that will take up all the space in horizontal line. Only for headings and other nice stuff, not p. -->
+	<script src="node_modules/fitter-happier-text/dist/fitter-happier-text.js"></script>
+	<script>
+		var headings = document.querySelectorAll('.js-fht');
+		fitterHappierText(headings, { baseline: 11, paddingY: 2 });
+	</script>
+
+	<!-- Handle the scrolling down smooth -->
+	<script>
+		$('a[data-toggle="scrollDown"]').click(function(event){
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop:$(this.hash).offset().top-10}, 600); // minus 50 pga menun som sittar fast! kanske kan ändra på ngt sätt??
+		});
+
+		$('body').scrollspy({ target: '.navbar-default' })
+	</script>
+
+
+</body>
+</html>

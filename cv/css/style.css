@@ -1,0 +1,128 @@
+html {
+	width: 100%;
+
+}
+
+body {
+	padding: 20px;
+}
+
+/* to see clearly all the sections*/
+h4 {
+	color: silver;
+	text-transform: uppercase;
+}
+
+/* language circles */
+.circle{
+	width:100px;
+	height:100px;
+	border-radius:50px;
+	font-size:15px;
+	line-height:100px;
+	text-align:center;
+	border: 1px solid gray;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.circle:hover{
+	background-color: #E6E9ED;
+	opacity: 0.7;
+	border: 1px solid #E6E9ED;
+}
+
+
+.dividerRight {
+	border-right: 0px solid gray;
+}
+
+.dividerLeft{
+	border-left: 1px solid gray;
+}
+
+.aboutIcons {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/* custom the bootstrap content. make more padding */
+.content {
+	padding: 0 0px;
+	width: 60%;
+
+	margin-left:auto;
+	margin-right:auto;
+}
+.extraPadding{
+	padding-left: 15px;
+}
+
+/* transform classes */
+.upperCase {
+	text-transform: uppercase;
+}
+.italicTrans{
+	font-style: italic;
+}
+
+.workItem {
+	margin-bottom: 5px;
+}
+
+/* different sections in the pages that only occurs ones */
+#infoMe {
+	text-align: justify;
+}
+
+
+#personalInformation {
+
+}
+
+
+/*  Class that holds the first big information */
+.bigHeader {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: orange;
+}
+
+/* for mobiles */
+
+ /* CSS for smaller screens, small changes in layot etc. */ 
+
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+	.content {
+		width: 100%;
+	} 
+
+	#personalInformation{
+		width: 50%;
+		margin: auto;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) { .content {
+		width: 80%;
+	} }
+
+/* Nice colors:
+GRAPEFRUIT: #ED5565, #DA4453
+BITTERSWEET: #FC6E51, #E9573F
+MINT #48CFAD, #37BC9B <- FIN!!
+AQUA: #4FC1E9, #3BAFDA
+PINK ROSE #EC87C0, #D770AD
+MEDIUM GRAY #CCD1D9, #AAB2BD
+LIGHT GRAY #F5F7FA, #E6E9ED
+DARK GRAY #656D78, #434A54*/
+
+/* Color name that can be used, due to the color.css file 
+navy, aqua, olive, lime, orange, maroon
+purple, gray, blue, teal, green, yellow
+red, fuschia, black, silver
+*/
