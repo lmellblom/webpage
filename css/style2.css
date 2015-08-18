@@ -1,0 +1,116 @@
+/*ui.bootstrap*/
+.nav, #projectHeader, .pagination, .carousel,#courseHeader, .panel-title a { cursor: pointer; }
+
+html {
+	width: 100%;
+
+}
+
+body {
+	padding: 20px;
+}
+
+.well {
+	margin:2px;
+	background-color: white !important;
+	background-image: none;
+	box-shadow: none;
+	border:0px;
+	border-left: 1px solid gray;
+}
+
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+#aboutMeParagraph {
+	text-align: justify;
+}
+
+#projects {
+	text-align: justify;
+}
+
+
+/* custom the bootstrap content. make more padding */
+.content {
+	padding: 0 0px;
+	width: 60%;
+
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/*  Class that holds the first big information */
+.bigHeader {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: teal;
+}
+
+.keywords {
+	font-weight: bold;
+}
+
+
+/* to see clearly all the sections*/
+h4 {
+	color: silver;
+	text-transform: uppercase;
+}
+
+
+/* transform classes */
+.upperCase {
+	text-transform: uppercase;
+}
+.italicTrans{
+	font-style: italic;
+}
+
+.oneProject {
+	margin-bottom: 20px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+	.content {
+		width: 100%;
+	} 
+	#personalInformation, .projectImage{
+		width: 50%;
+		margin: auto;
+		padding-bottom: 10px;
+	}
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) { .content {
+		width: 80%;
+	}
+}
+
+/* Nice colors:
+GRAPEFRUIT: #ED5565, #DA4453
+BITTERSWEET: #FC6E51, #E9573F
+MINT #48CFAD, #37BC9B <- FIN!!
+AQUA: #4FC1E9, #3BAFDA
+PINK ROSE #EC87C0, #D770AD
+MEDIUM GRAY #CCD1D9, #AAB2BD
+LIGHT GRAY #F5F7FA, #E6E9ED
+DARK GRAY #656D78, #434A54*/
+
+/* Color name that can be used, due to the color.css file 
+navy, aqua, olive, lime, orange, maroon
+purple, gray, blue, teal, green, yellow
+red, fuschia, black, silver
+*/
