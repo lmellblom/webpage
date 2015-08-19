@@ -13,11 +13,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-	<!-- Angular -->
+	<!-- Angular components -->
 	<script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-	
+
 	<!-- Nice icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
 
@@ -54,26 +54,51 @@
 			<p>Spännande projekt som jag gjort antingen själv eller med härliga kamrater.</p>
 
 			<div collapse="projects.isCollapsed">
-				<div class="oneProject row" ng-repeat="item in projects">
-					<div class="col-sm-4">
-						<img class="projectImage img-rounded img-responsive" ng-src="{{item.img}}" ng-click="item.isCollapsed = !item.isCollapsed">
+				<!--<div class="row">-->
+					<div class="oneProject" ng-repeat="item in projects">
+						<div class="row">
+							<div class="col-sm-4 projectImage">
+								<img class="img-rounded img-responsive" ng-src="{{item.img}}">
+							</div>
+							<div class="col-sm-8">
+								<h5>{{item.header}}</h5>
+								<p class="keywords">{{item.keyword}}</p>
+								<p>{{item.text}}</p>
+
+								<a ng-if="item.page" ng-href="{{item.page}}" target="_blank"><i class="fa fa-2x fa-chrome"></i></a>
+								<a ng-if="item.github" ng-href="{{item.github}}" target="_blank"><i class="fa fa-2x fa-github"></i></a>
+								<a ng-if="item.youtube" ng-href="{{item.youtube}}" target="_blank"><i class="fa fa-2x fa-youtube"></i></a>
+							</div>
+						</div>
 					</div>
 
-					<div class="col-sm-8">
-						<h5>{{item.header}}</h5>
-						<p class="keywords">{{item.keyword}}</p>
-						<p collapse="item.isCollapsed">{{item.text}}</p>
-						<p ng-show="item.isCollapsed"><a ng-click="item.isCollapsed = !item.isCollapsed">Läs mer</a></p>
-						<p ng-hide="item.isCollapsed"><a ng-click="item.isCollapsed = !item.isCollapsed">Göm</a></p>
-					</div>
 
+
+				<!--collapsing
+				<div class="oneProjectPic col-sm-2 col-xs-6" ng-repeat="itemPic in projects">
+					<img class="projectImage img-rounded img-responsive" ng-src="{{itemPic.img}}" ng-click="selectedProject(itemPic)" ng-class="(itemPic.header==showProject.header && itemPic.isCollapsed==false ) ? 'selectedImage' : ''">
+					<center><i ng-show="!showProjectCollapsed && itemPic.header==showProject.header" class="hidden-xs fa fa-3x fa-angle-down"></i></center>
 				</div>
+				</div>
+
+				<div collapse="showProjectCollapsed" id="projectShown">
+					<h5>{{showProject.header}}</h5>
+					<p class="keywords">{{showProject.keyword}}</p>
+					<p>{{showProject.text}}</p>
+
+					<!-- if github or page --><!--
+					<a ng-if="showProject.page" ng-href="{{showProject.page}}" target="_blank"><i class="fa fa-2x fa-chrome"></i></a>
+					<a ng-if="showProject.github" ng-href="{{showProject.github}}" target="_blank"><i class="fa fa-2x fa-github"></i></a>
+					<a ng-if="showProject.youtube" ng-href="{{showProject.youtube}}" target="_blank"><i class="fa fa-2x fa-youtube"></i></a>
+				</div>-->
+
+			<!--</div>-->
 			</div>
-		</div>
 
 		<hr>
 
 		<div id="courses">
+
 			<h4 id="courseHeader" ng-click="courses.isCollapsed = !courses.isCollapsed">
 				<i class="fa fa-book"></i> Lästa kurser 
 				<i ng-show="courses.isCollapsed" class="fa fa-angle-down"></i>
@@ -104,7 +129,7 @@
 
 			<p>Om du vill ha mitt CV som <i class="fa fa-file-pdf-o"> pdf</i>, så är det bara att du höra av dig till <a href="mailto:linnea@mellblom.nu?Subject=Hello" target="_blank"><i class="fa fa-envelope-o"></i> min mail</a> och gärna om du undrar över något annat. Kika annars in på mitt <a href="file://localhost/Users/linneamellblom/Documents/egnaGithubProjekt/linneamellblom.se/webpage/cv/index.html" target="_blank">onlineCV</a>. Jag finns även på <a href="http://www.github.com/lmellblom" target="_blank"><i class="fa fa-github"></i> GitHub</a> och <a href="https://www.linkedin.com/pub/linn%C3%A9a-mellblom/a3/909/241" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>.</p> 
 			
-			<h5 class="js-fht upperCase">Tack och hej!</h5>
+			<h5 class="js-fht upperCase">På återseende!</h5>
 		</div>
 		
 

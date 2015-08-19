@@ -6,6 +6,10 @@ html {
 
 }
 
+#projectHeader:hover, #courseHeader:hover {
+	opacity: 0.1;
+}
+
 body {
 	padding: 20px;
 }
@@ -79,12 +83,20 @@ h4 {
 	margin-bottom: 20px;
 }
 
+.projectImage:hover {
+	opacity: 0.4
+}
+
+.selectedImage {
+	opacity: 0.4;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) { 
 	.content {
 		width: 100%;
 	} 
-	#personalInformation, .projectImage{
+	#personalInformation{
 		width: 50%;
 		margin: auto;
 		padding-bottom: 10px;
