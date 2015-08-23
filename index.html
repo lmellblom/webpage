@@ -4,230 +4,141 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- FONTS-->
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+	<!-- More nicer colors -->
+	<link rel="stylesheet" href="node_modules/colors.min.css">
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-	<!-- Optional theme -->
+	<!-- Bootstrap stuff! -->
+	<link rel="stylesheet" href="css/paper-bootstrap.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
-	<link rel="stylesheet" href="css/style.css">
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
+	<!-- Angular components -->
+	<script src="bower_components/angular.min.js"></script>
+    <script src="bower_components/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-animate.js"></script>
+
+	<!-- Nice icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
 
+	<!-- My custom css for this site -->
+	<link rel="stylesheet" href="css/style2.css">
 	
 	<title>Linnéa Mellblom</title>
 </head> 
 
-<body data-spy="scroll" data-target=".navbar-default" id="backHome">
+<body ng-app="meInfo" ng-controller="meCtrl">
 
-
-
-<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
-	<div class="container-fluid">
-
-		<div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#backHome" data-toggle="scrollDown" class="navbar-brand">Linnéa Mellblom</a>
-        </div>
-
-	    <div class="collapse navbar-collapse" id="navbarCollapse">
-	      <ul class="nav navbar-nav navbar-right">
-	      	<!--<li><a href="#home" data-toggle="scrollDown">Om mig</a></li>-->
-	      	<li><a href="cv/index.html" target="_blank">CV</a></li>
-	        <li><a href="#projekt" data-toggle="scrollDown">Projekt</a></li>
-	       	<li><a href="#kurser" data-toggle="scrollDown">Kurser</a></li>
-	        <li><a href="#kontakt" data-toggle="scrollDown">Kontakt</a></li>
-	       </ul>
-	   </div>
-
-    </div>
-</nav>
-
-	<div class="jumbotron" id="home">
-		
-		<h1 class="text-center text-uppercase">
-			
-			<img class="imgHeader img-circle img-responsive" src="pics/linnea.jpg" alt="Linnéa"> 
-		Linnéa Mellblom
-		</h1>
-		<!--<p><b>Utbildning  Projekt  Kontakt</b></p>-->
-		<p class="hidden-xs"><em>Studerar Civilingenjör i Medieteknik på Linköpings Universitet. Examen 2016. </em></p> 
-		<p class="visible-xs">Studerar Civilingenjör i Medieteknik på Linköpings Universitet och går nu termin 8 av 10. Har en förkärlek för att hacka kod och lösa problem. När jag inte studerar så spelas det fotboll! Tveka inte att höra av dig om du undrar över något.</p>
-		<br>
-		<br>
-		<div id ="frontPageImg" class="hidden-xs">
-			<a href="#infoVis" data-toggle="scrollDown"><img class="img-circle" src="pics/project/infoVis.png" alt="InfoVis"></a> 
-			<a href="#fire" data-toggle="scrollDown"><img class="img-circle" src="pics/project/fire.png" alt="Fire"></a>
-			<a href="#qr" data-toggle="scrollDown"><img class="img-circle" src="pics/project/qrCodes.png" alt="Qr"></a>
-			<a href="#creatureEvolution" data-toggle="scrollDown"><img class="img-circle" src="pics/project/creatureEvolution.png" alt="creatureEvolution"></a> 
-			<a href="#curling" data-toggle="scrollDown"><img class="img-circle" src="pics/project/curling_kvadrat.png" alt="Space Curling"></a> 
-			<a href="#tatzy" data-toggle="scrollDown"><img class="img-circle" src="pics/project/tatzy_kvadrat.png" alt="Tatzy"></a> 
-		</div>
-		<a href="#wrapper-project" class="downButton hidden-xs" data-toggle="scrollDown">
-				<i class="fa fa-chevron-down"></i>
-		</a>
+	<div class="bigHeader">
+		<h1 class="js-fht">LINNÉA MELLBLOM</h1>
+		<h2 class="js-fht italicTrans upperCase">Studerar Civilingenjör i Medieteknik på Linköpings Universitet. Examen 2016.</h2>
 	</div>
+
 	<div class="content">
-
-	<!--	<div id="wrapper-om">
-			<div id="ommig" class="header">
-				Vem är jag?
+		<div class="row" id="aboutMe">
+			<div class="col-sm-4" id="personalInformation">
+				<img class="img-responsive img-circle" ng-src="pics/linnea2.jpg" alt="Linnéa">
 			</div>
-			<div>
-				<p>I framtiden ser jag mig jobba med systemutveckling, gärna inom webb eller visualisering men hittar hela tiden nya områden som är roliga att utforska ytterligare.</p>
-			</diV>
-		</div>
--->
-
-
-		<div id="wrapper-project">
-			<div id="projekt" class="header">
-				PROJEKT
-			</div>
-			<div class="project even">
-				<img class="img-circle" src="pics/project/infoVis.png" alt="infoVis" id="infoVis"> 
-				<h2>Visualisering av valresultat</h2>
-				<p class="keyWords">Informationsvisualisering, JavaScript, d3.js</p>
-				<p>Projekt i kursen <em>Informationsvisualisering</em>. Visualisering av Sveriges valresultat 2010. Fokus på att hitta samband mellan valresultatet och andra faktorer såsom befolkning och medelinkomst. Resultatet kan ses <a href="http://lmellblom.github.io/InfoVis-election/">här</a>. Projektet gjordes i en grupp om två. Använde JavaScript och biblioteket d3.js.  OBS! För tillfället kan endast projektet ses i Firefox. </p> 
-			</div>
-			<div class="project odd">
-				<img class="img-circle" src="pics/project/fire.png" alt="Fire" id="fire"> 
-				<h2>"I see fire"</h2>
-				<p class="keyWords">Procedurella metoder för bilder, GLSL, WebGL</p>
-				<p>Projekt i kursen <em>Procedurella metoder för bilder</em>. Arbetade själv med att skapa procedurell eld med WebGL och GLSL. Resultatet kan ses <a href="http://lmellblom.github.io/fire-webGL">här</a>.</p>
-			</div>
-			<div class="project even" id="qr">
-				<img class="img-circle" src="pics/project/qrCodes.png" alt="Qr"> 
-				<h2>Qr code processing</h2>
-				<p class="keyWords">Avancerad bildbehandling, MATLAB</p>
-				<p>Ett projekt i kursen <em>Avancerad Bilbehandling</em>. Skulle lokalisera en QR kod i en bild och sedan avkoda meddelandet. Projektet var begränsat till version 6 av QR versioner men även att QR koden lästes av horisontellt från vänster till höger i bilden. Finns på <a href="https://github.com/lmellblom/QR-code" target="_blank">GitHub</a>. Projektet gjordes tillsammans med tre andra. Jag arbetade mest med att arbeta fram algoritmen och kodade i Matlab. </p>
-			</div>
-
-			<div class="project odd" id="creatureEvolution">
-				<img class="img-circle" src="pics/project/creatureEvolution.png" alt="creatureEvolution"> 
-				<h2>Creature Evolution</h2>
-				<p class="keyWords">Kandidatarbete, Agil utveckling, C++, OpenGL, Qt</p>
-				<p>Creature Evolution utvecklades under Medietekniskt kandidatprojekt. Varelserna är evolverade med genetiska algoritmer och använder ett neuralt nätverk som hjärna. Deras beteende är det enda som utvecklas och kan sättas av användaren. Man kan också välja olika varelser att utveckla. Produkten är inspirerad av arbete av Karl Sims. 
-				Progammet är utvecklat i C++ med OpenGl för grafik. Bullet användes för fysikalisk simulation och Qt för GUI. Demo finns på <a href="http://youtu.be/TI1YTttK8m8" target="_blank">youtube</a>. Koden kan kikas på <a href="https://github.com/kbladin/creature_evolution" target="_blank">GitHub</a>. I projektet hade jag mer ansvar för genetiska algoritmer och kodade i C++. </p>
-			</div>
-
-			<div class="project even" id="curling">
-				<img class="img-circle" src="pics/project/curling_kvadrat.png" alt="Space Curling"> 
-				<h2>Space Curling</h2>
-				<p class="keyWords">Modellering och simulering, WebGL, JavaScript</p>
-				<p>Ett curlingspel för två spelare. Gjort i WebGL och JavaScript. Modellerna är gjorda i Blender. Som spelare väljer du utslagsvinkel och hastighet. Spelet tar hänsyn till friktion, krock, rotation mm. Curlingstenens bana är grundande på fysikaliska samband. Koden kan kikas på <a href="https://github.com/lmellblom/MoS_Projekt" target="_blank">GitHub</a>. Live-demo finns på <a href="http://lmellblom.github.io/MoS_Projekt" target="_blank">denna sida</a>. Ansvarade en del för uppbyggnaden av JavaScript-koden och hur detta skulle vara uppbyggt.</p>
-			</div>
-
-			<div class="project project-last odd" id="tatzy">
-				<img class="img-circle" src="pics/project/tatzy_kvadrat.png" alt="Tatzy"> 
-				<h2>Tatzy</h2>
-				<p class="keyWords">Kommunikation och användargränssnitt, Java</p>
-				<p>Ett yatzy-spel som är kodat i Java. Går ut på att få så många poäng som möjligt. Efter ett tärningskast är det upp till spelaren att välja vart poängen ska hamna. För att underlätta för spelaren så räknar spelet även ut den potentiella poängen i varje kategori. Svåra var att ta fram en struktur för hur man räknar ut poäng och strukturera upp spelet.</p>
-			</div>
-
-		</div>
-
-
-		<div id="wrapper-kurser">
-			<div id="kurser" class="header">KURSER</div>
-			<div class="kurser-content">
-				<p>Innehar en kandidatexamen i Medieteknik sedan 2014. Dessa kurser har jag läst under min studietid hittils: </p>
-				<div class="container-fluid">
-<!--<p class="kurserna">-->
-<div class="row courses">
-<div class="col-xs-12 .col-sm-4 col-md-4">TNA001        Matematisk grundkurs</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNA002        Linjär Algebra</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TND012        Programmering grundkurs</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM088        Digitala Medier</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNMK30        Elektronisk Publicering</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNA003        Analys I</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TND002        Objektorienterad programmering</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TND005        Tillämpad matematik i teknik och naturvetenskap</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNA004        Analys II</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM046        Datorgrafik</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNA006        Analys III</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM040        Kommunikation och användargränssnitt</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNA007        Vektoranalys</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNE043        Mekanik och vågfysik</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM042        Design</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNG032        Tillämpad transformteori</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNG033        Programmering i C++</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNG006        Matematisk statistik</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNG015        Signaler och system</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM061        3-D Datorgrafik</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNG028        Reglerteknik</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM059        Grafisk Teknik</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNG022        Modellbygge och simulering</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM087        Bildbehandling och bildanalys</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM093        Tillämpad visualisering och virtuell verklighet</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM085        Modelleringsprojekt</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TND004        Datastrukturer</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM094        Medietekniskt kandidatprojekt</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM031        Nätverksprogrammering och säkerhet</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TDDB84        Designmönster</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM034        Avancerad bildbehandling</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM091        Mediaproduktion för immersiva miljöer</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM084        Procedurella metoder för bilder</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM084        Informationvisualisering</div>
-<div class="col-xs-12 .col-sm-4 col-md-4">TNM069        Grafisk Design och Kommunikation</div>
-</div>
-</div>
+			<div class="col-sm-8" id="aboutMeParagraph">
+				<p>{{aboutMe}}</p>
 			</div>
 		</div>
 
-		<div id="wrapper-kontakt">
-			<div id="kontakt" class="header">
-				KONTAKT
+		<hr>
+
+		<div id="projects">
+			<h4 id="projectHeader" ng-click="projects.isCollapsed = !projects.isCollapsed"><i class="fa fa-laptop"></i> Projekt <i ng-show="projects.isCollapsed" class="fa fa-angle-down"></i>
+				<i ng-hide="projects.isCollapsed" class="fa fa-angle-up"></i>
+			</h4>
+
+			<p>Spännande projekt som jag gjort antingen själv eller med härliga kamrater.</p>
+
+			<div collapse="projects.isCollapsed">
+				<!--<div class="row">-->
+					<div class="oneProject" ng-repeat="item in projects">
+						<hr>
+						<div class="row">
+							<div class="col-sm-4">
+								<a ng-href="{{homeLink(item)}}" target="_blank"><img class="projectImage img-circle img-responsive" ng-src="pics/project/{{item.img}}"></a>
+							</div>
+							<div class="col-sm-8">
+								<h5>{{item.header}}</h5>
+								<p class="keywords">{{item.keyword}}</p>
+								<p>{{item.text}}</p>
+
+								<center>
+								<a ng-if="item.page" ng-href="{{item.page}}" target="_blank"><i class="fa fa-3x fa-home"></i></a>
+								<a ng-if="item.github" ng-href="{{item.github}}" target="_blank"><i class="fa fa-3x fa-github"></i></a>
+								<a ng-if="item.youtube" ng-href="{{item.youtube}}" target="_blank"><i class="fa fa-3x fa-youtube"></i></a>
+								<a ng-if="item.pdf" ng-href="pdf/{{item.pdf}}" target="_blank"><i class="fa fa-3x fa-file-pdf-o"></i></a>
+								
+								</center>
+							</div>
+						</div>
+					</div>
 			</div>
-			<div class="contact-content">
-				<p> Det är bara att höra av dig till <a href="mailto:linnea@mellblom.nu?Subject=Hello" target="_blank">min mail</a> om du undrar över något. Kika gärna in annars på <a href="http://www.github.com/lmellblom" target="_blank">GitHub</a> eller på min <a href="https://www.linkedin.com/pub/linn%C3%A9a-mellblom/a3/909/241" target="_blank">LinkedIn</a>.</p>
-				<br>
-				<div class="kontakt">
-					<a href="http://www.github.com/lmellblom" target="_blank">
-						<img height="40" src="icons/github_black.png" alt="GitHub">
-					</a>
-				</div>
-				<div class="kontakt">
-					<a href="https://www.linkedin.com/pub/linn%C3%A9a-mellblom/a3/909/241" target="_blank">
-						<img height="45" src="icons/linkedin.png" alt="linked">
-					</a>
-				</div>
-				<div class="kontakt">
-					<a href="mailto:linnea@mellblom.nu?Subject=Hello" target="_blank">
-						<img height="50" src="icons/mail.svg" alt="Mail">
-					</a>
-				</div>
+
+		<hr>
+
+		<div id="courses">
+
+			<h4 id="courseHeader" ng-click="courses.isCollapsed = !courses.isCollapsed">
+				<i class="fa fa-book"></i> Lästa kurser 
+				<i ng-show="courses.isCollapsed" class="fa fa-angle-down"></i>
+				<i ng-hide="courses.isCollapsed" class="fa fa-angle-up"></i>
+			</h4>
+
+			<p>Kurser som jag läst under utbildningen civilingenjör i medieteknik på Linköpings universitet, Norrköping. (<i>11-pågående</i>)</p><p><i>Om inget annat anges så avser kursen 6hp.</i></p>
+
+			<div collapse="courses.isCollapsed">
+  			<div class="row row-eq-height" ng-repeat="rows in chunkedData">
+  				<div class="col-xs-6 well well-sm" ng-repeat="item in rows">
+  					<div class="row">
+  						<div class="col-sm-3"><b>{{item.code}}</b> </div>
+  						<div class="col-sm-9">{{item.name}}</div>
+  					</div>
+  					
+  				</div>
 			</div>
 		</div>
+
+
+		</div>
+
+		<hr>
+
+		<div id="contact">
+			<h4><i class="fa fa-paper-plane-o"></i> Kontakt</h4>
+
+			<p>Om du vill ha mitt CV som <i class="fa fa-file-pdf-o"> pdf</i>, så är det bara att du höra av dig till <a href="mailto:linnea@mellblom.nu?Subject=Hello" target="_blank"><i class="fa fa-envelope-o"></i> min mail</a> och gärna om du undrar över något annat. Kika annars in på mitt <a href="http://www.linnemellblom.se/cv" target="_blank">onlineCV</a>. Jag finns även på <a href="http://www.github.com/lmellblom" target="_blank"><i class="fa fa-github"></i> GitHub</a> och <a href="https://www.linkedin.com/pub/linn%C3%A9a-mellblom/a3/909/241" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>.</p> 
+			
+			<h5 class="js-fht upperCase">På återseende!</h5>
+		</div>
+		
 
 	</div>
 
 
-    <!-- Handle the scrolling down smooth -->
+	<!-- Get angular data -->
+	<script type="text/javascript" src="meInfo.js"></script>
+
+	<!-- Handle the text that will take up all the space in horizontal line. Only for headings and other nice stuff, not p. -->
+	<script src="node_modules/fitter-happier-text.js"></script>
+	<script>
+		var headings = document.querySelectorAll('.js-fht');
+		fitterHappierText(headings, { baseline: 11, paddingY: 2 });
+	</script>
+
+	<!-- Handle the scrolling down smooth -->
 	<script>
 		$('a[data-toggle="scrollDown"]').click(function(event){
 			event.preventDefault();
 			$('html,body').animate({
-				scrollTop:$(this.hash).offset().top-50}, 600); // minus 50 pga menun som sittar fast! kanske kan ändra på ngt sätt??
+				scrollTop:$(this.hash).offset().top-10}, 600); // minus 50 pga menun som sittar fast! kanske kan ändra på ngt sätt??
 		});
 
 		$('body').scrollspy({ target: '.navbar-default' })
 	</script>
-
 
 </body>
 </html>
