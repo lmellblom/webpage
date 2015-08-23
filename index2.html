@@ -56,43 +56,26 @@
 			<div collapse="projects.isCollapsed">
 				<!--<div class="row">-->
 					<div class="oneProject" ng-repeat="item in projects">
+						<hr>
 						<div class="row">
-							<div class="col-sm-4 projectImage">
-								<img class="img-rounded img-responsive" ng-src="{{item.img}}">
+							<div class="col-sm-4">
+								<a ng-href="{{homeLink(item)}}" target="_blank"><img class="projectImage img-circle img-responsive" ng-src="pics/project/{{item.img}}"></a>
 							</div>
 							<div class="col-sm-8">
 								<h5>{{item.header}}</h5>
 								<p class="keywords">{{item.keyword}}</p>
 								<p>{{item.text}}</p>
 
-								<a ng-if="item.page" ng-href="{{item.page}}" target="_blank"><i class="fa fa-2x fa-chrome"></i></a>
-								<a ng-if="item.github" ng-href="{{item.github}}" target="_blank"><i class="fa fa-2x fa-github"></i></a>
-								<a ng-if="item.youtube" ng-href="{{item.youtube}}" target="_blank"><i class="fa fa-2x fa-youtube"></i></a>
+								<center>
+								<a ng-if="item.page" ng-href="{{item.page}}" target="_blank"><i class="fa fa-3x fa-home"></i></a>
+								<a ng-if="item.github" ng-href="{{item.github}}" target="_blank"><i class="fa fa-3x fa-github"></i></a>
+								<a ng-if="item.youtube" ng-href="{{item.youtube}}" target="_blank"><i class="fa fa-3x fa-youtube"></i></a>
+								<a ng-if="item.pdf" ng-href="pdf/{{item.pdf}}" target="_blank"><i class="fa fa-3x fa-file-pdf-o"></i></a>
+								
+								</center>
 							</div>
 						</div>
 					</div>
-
-
-
-				<!--collapsing
-				<div class="oneProjectPic col-sm-2 col-xs-6" ng-repeat="itemPic in projects">
-					<img class="projectImage img-rounded img-responsive" ng-src="{{itemPic.img}}" ng-click="selectedProject(itemPic)" ng-class="(itemPic.header==showProject.header && itemPic.isCollapsed==false ) ? 'selectedImage' : ''">
-					<center><i ng-show="!showProjectCollapsed && itemPic.header==showProject.header" class="hidden-xs fa fa-3x fa-angle-down"></i></center>
-				</div>
-				</div>
-
-				<div collapse="showProjectCollapsed" id="projectShown">
-					<h5>{{showProject.header}}</h5>
-					<p class="keywords">{{showProject.keyword}}</p>
-					<p>{{showProject.text}}</p>
-
-					<!-- if github or page --><!--
-					<a ng-if="showProject.page" ng-href="{{showProject.page}}" target="_blank"><i class="fa fa-2x fa-chrome"></i></a>
-					<a ng-if="showProject.github" ng-href="{{showProject.github}}" target="_blank"><i class="fa fa-2x fa-github"></i></a>
-					<a ng-if="showProject.youtube" ng-href="{{showProject.youtube}}" target="_blank"><i class="fa fa-2x fa-youtube"></i></a>
-				</div>-->
-
-			<!--</div>-->
 			</div>
 
 		<hr>

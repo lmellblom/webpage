@@ -83,13 +83,18 @@ h4 {
 	margin-bottom: 20px;
 }
 
-.projectImage:hover {
-	opacity: 0.4
+.oneProject a {
+	margin-right: 20px;
+	color: #656D78;
+}
+.oneProject a:hover {
+	color: #F5F7FA;
 }
 
-.selectedImage {
-	opacity: 0.4;
+.projectImage {
+
 }
+
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) { 
@@ -100,6 +105,10 @@ h4 {
 		width: 50%;
 		margin: auto;
 		padding-bottom: 10px;
+	}
+	.projectImage{
+		width: 50%;
+		margin: auto;
 	}
 
 
