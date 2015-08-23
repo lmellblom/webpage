@@ -24,6 +24,13 @@ app.controller('meCtrl', function($scope, $http) {
 		pdf: "Bildmosaik.pdf"
 	},
 	{
+		header: "Grafisk Design och Kommunikation",
+		keyword: "Visuell kommunikation, Adobe Creative Suite",
+		text : "En introduktionskurs i grafisk design och kommunikation där vi i grupp om tre personer skulle ta fram en företagsidentitet för ett cykelföretag. Företagsnamn och värderingar skulle tas fram. Grafisk profil och konceptskisser. Målgruppsanalys och marknadsperspektiv. Den grafiska profilen kan ses i pdf:en (OBS. Allt om företaget är fiktivt!). ",
+		img: "GDK.jpg",
+		pdf: "GrafiskProfil.pdf"
+	},
+	{
 		header: "Visualisering av valresultat",
 		keyword: "Informationsvisualisering, JavaScript, d3.js",
 		text: "Projekt i kursen Informationsvisualisering. Visualisering av Sveriges valresultat 2010. Fokus på att hitta samband mellan valresultatet och andra faktorer såsom befolkning och medelinkomst. Projektet gjordes i en grupp om två. Använde JavaScript och biblioteket d3.js. OBS! För tillfället kan endast projektet ses i Firefox.",
