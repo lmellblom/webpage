@@ -241,8 +241,12 @@ app.controller('meCtrl', function($scope, $http) {
 		name:"Mediaproduktion för immersiva miljöer"
 	},
 	{
+		code: "TNM084",
+		name: "Procedurella metoder för bilder"
+	},
+	{
 		code:"TNM084",
-		name:"Informationvisualisering"
+		name:"Informationsvisualisering"
 	},
 	{
 		code:"TNM069",
