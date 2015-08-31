@@ -6,7 +6,7 @@ app.controller('cvCtrl', function($scope) {
 
 	$scope.me = {
 		header: "Vem är jag?",
-		description: "Jag är en positiv och glad person som är nyfiken på nya kunskaper. Jag studerar på Civilingenjörsprogrammet Medieteknik i Norrköping och börjar till hösten termin 9 av 10. I framtiden ser jag mig jobba med systemutveckling, gärna inom webb eller visualisering men hittar hela tiden nya områden som är roliga att utforska ytterligare. På fritiden ligger träning mig varmt om hjärtat och spelar fotboll i Lindö FF där jag är lagkapten."
+		description: "Jag är en positiv och glad person som är nyfiken på nya kunskaper. Jag studerar på Civilingenjörsprogrammet Medieteknik i Norrköping och går femte och därmed sista året på utbildningen. I framtiden ser jag mig jobba med systemutveckling, gärna inom webb eller visualisering men hittar hela tiden nya områden som är roliga att utforska ytterligare. På fritiden ligger träning mig varmt om hjärtat och spelar fotboll i Lindö FF där jag är lagkapten."
 	};
 
 	$scope.personalInformation = [

@@ -281,7 +281,7 @@ app.controller('meCtrl', function($scope, $http) {
 
 	$scope.contact;
 
-	$scope.aboutMe = "Studerar Civilingenjör i Medieteknik på Linköpings Universitet och börjar till hösten termin 9 av 10. Har en förkärlek för att hacka kod och lösa problem. När jag inte studerar så spelas det fotboll! Tveka inte att höra av dig om du undrar över något. På denna sida kan du hitta projekt som gjort i skolan, vilka kurser jag läst och även annat jag hittar på. Enjoy!";
+	$scope.aboutMe = "Studerar Civilingenjör i Medieteknik på Linköpings Universitet och går femte och därmed sista året på utbildningen. Har en förkärlek för att hacka kod och lösa problem. När jag inte studerar så spelas det fotboll! Tveka inte att höra av dig om du undrar över något. På denna sida kan du hitta projekt som gjort i skolan, vilka kurser jag läst och även annat jag hittar på. Enjoy!";
 
 
 });
