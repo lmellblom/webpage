@@ -2,7 +2,7 @@
 var app = angular.module('cvInfo', []);
 app.controller('cvCtrl', function($scope) {
 
-	$scope.imageOfMeSrc = "../pics/linnea2.jpg"; 
+	$scope.imageOfMeSrc = "../pics/me.jpg"; 
 
 	$scope.me = {
 		header: "Vem är jag?",

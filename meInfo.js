@@ -8,6 +8,15 @@ app.controller('meCtrl', function($scope, $http) {
 
 	$scope.projects = [
 	{
+		header: "Arrows",
+		keyword : "Design och programmering av datorspel, phaser.io, JavaScript",
+		text: "Ett spel jag gjort i kursen 'Design och programmering av datorspel' 2015. Hitta hem med så få klick som möjligt. Åk genom 4 olika kapitel med 20 nivåer. Undvik svarta hål, samla stjärnor och färga världen! Gjort för både mobil och desktop och kan spelas i browsern.",
+		img: "arrows.png",
+		github: "https://github.com/lmellblom/TDDD23-Arrows",
+		page: "http://lmellblom.github.io/TDDD23-Arrows/",
+		youtube: "https://youtu.be/RLhM7SwaRfI"
+	},
+	{
 		header: "Träningsdagbok",
 		keyword : "Avancerad webbprogrammering, MEAN",
 		text: "Ett projekt som gjordes själv i kursen 'Advanced Web Programming'. Skapa en full-stack applikation där fokus låg både på klienten och serversidan. Skrev applikationen i MEAN, MongoDB, Express, AngularJS och NodeJs. Lärorikt projekt där vi började från noll och byggde upp allt själva. Från många olika tuturials kom jag sedan fram till slutresultatet. Mycket kan göras bättre och även fler features kan läggas till. Applikationen utgick från en träningsdagbok där du som användare ska fylla i när och vad du tränat. Det kan även bli ett community där du kan se dina FB-vänner och kan då gå in och kommentera och se deras aktiviteter.",
