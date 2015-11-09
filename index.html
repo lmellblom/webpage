@@ -68,6 +68,11 @@
 								<p class="keywords">{{item.keyword}}</p>
 								<p>{{item.text}}</p>
 
+								<div ng-if="item.extra">
+								<p class="extraText"><i ng-if="item.extra" class="fa fa-trophy"></i> {{item.extra}}</p>
+								<center> <p class="awardText" ng-if="item.extraPic">Tredje plats i <img ng-src="pics/{{item.extraPic}}"> 2015!</p></center>
+								</div>
+
 								<center>
 								<a ng-if="item.page" ng-href="{{item.page}}" target="_blank"><i class="fa fa-3x fa-home"></i></a>
 								<a ng-if="item.github" ng-href="{{item.github}}" target="_blank"><i class="fa fa-3x fa-github"></i></a>

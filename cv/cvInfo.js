@@ -97,7 +97,6 @@ app.controller('cvCtrl', function($scope) {
 	];
 	$scope.otherCommitments.header = "Förtroendeuppdrag";
 
-
 	/*succes, warning, danger*/
 	$scope.skills = [
 	{
@@ -107,7 +106,7 @@ app.controller('cvCtrl', function($scope) {
 	},
 	{
 		head:"C++",
-		percent: "100",
+		percent: "90",
 		level:"success"
 	},
 	{
@@ -122,12 +121,12 @@ app.controller('cvCtrl', function($scope) {
 	},
 	{
 		head:"Java",
-		percent: "90",
+		percent: "80",
 		level:"success"
 	},
 	{
 		head:"Matlab",
-		percent: "90",
+		percent: "80",
 		level:"success"
 	},
 	{

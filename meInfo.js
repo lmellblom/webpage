@@ -14,7 +14,9 @@ app.controller('meCtrl', function($scope, $http) {
 		img: "arrows.png",
 		github: "https://github.com/lmellblom/TDDD23-Arrows",
 		page: "http://lmellblom.github.io/TDDD23-Arrows/",
-		youtube: "https://youtu.be/RLhM7SwaRfI"
+		youtube: "https://youtu.be/RLhM7SwaRfI",
+		extra: "Deltog med detta spel i LiU Game Award 2015 och utav 80 bidrag valdes 10 finalister ut vilket jag sedan kom trea i! Wihuu.",
+		extraPic: "liuga.png"
 	},
 	{
 		header: "Träningsdagbok",
