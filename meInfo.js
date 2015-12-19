@@ -7,10 +7,18 @@ app.controller('meCtrl', function($scope, $http) {
 	$scope.separator = ",";
 
 	$scope.projects = [
+		{
+		header: "Moments",
+		keyword : "XML, XSLT, PHP, MySQL, RSS, DTD",
+		text: "Ett projekt som jag gjorde själv i kursen 'Dokumentstrukturer' och är en form av mikroblogg. Uppgiften var att skapa en sida som genom formulär haterade tillägg och ändrig av data i en databas. Fokus låg på att det skulle vara en XML-baserad data som hämtades och sedan skulle hateras med olika XSLT-transformationer. I mitt projekt kan man skapa användare för att kunna publicera innehåll, gå in och skriva inlägg, gilla andra inlägg och söka på olika kategorier i databasen. ",
+		img: "moments.png",
+		github: "https://github.com/lmellblom/TNM065/tree/master/project",
+		pdf: "moments_linme882.pdf"
+	},
 	{
 		header: "Arrows",
 		keyword : "Design och programmering av datorspel, phaser.io, JavaScript",
-		text: "Ett spel jag gjort i kursen 'Design och programmering av datorspel' 2015. Hitta hem med så få klick som möjligt. Åk genom 4 olika kapitel med 20 nivåer. Undvik svarta hål, samla stjärnor och färga världen! Gjort för både mobil och desktop och kan spelas i browsern.",
+		text: "Ett spel jag gjort i kursen 'Design och programmering av datorspel' 2015. Hitta hem med så få klick som möjligt. Åk genom 4 olika kapitel med 20 nivåer. Undvik svarta hål, samla stjärnor och färga världen! Gjort för både mobil och desktop och kan spelas i browsern. Spelet är en inledande prototyp och det 20 olika nivåerna visar de olika spelmekanismer som är implementerade.",
 		img: "arrows.png",
 		github: "https://github.com/lmellblom/TDDD23-Arrows",
 		page: "http://lmellblom.github.io/TDDD23-Arrows/",
@@ -274,6 +282,22 @@ app.controller('meCtrl', function($scope, $http) {
 	{
 		code:"TNM096",
 		name:"Artificiell intelligens - principer och tekniker"
+	},
+	{
+		code:"TDDD23",
+		name:"Design och programmering av datorspel"
+	},
+	{
+		code:"TNM067",
+		name:"Vetenskaplig visualisering"
+	},
+	{
+		code:"TNM095",
+		name:"Artificiell intelligens för interaktiv media"
+	},
+	{
+		code:"TNM065",
+		name:"Dokumentstrukturer"
 	}
 	];
 
