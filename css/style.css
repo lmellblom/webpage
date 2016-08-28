@@ -6,6 +6,10 @@ html, body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.first {
+	height: 95% !important;
+}
+
 .jumbotron p {
 	font-size: 13px;
 	line-height: 1.5em;
