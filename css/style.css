@@ -15,6 +15,22 @@ html, body {
 	color: #FFA21F;
 }
 
+.jumbotron p a i {
+	color: #9C9C9C;
+}
+
+.jumbotron p a:link {
+    color: #9C9C9C;
+}
+
+.jumbotron p a:visited {
+    color: #9C9C9C;
+}
+
+.jumbotron p a:hover {
+    color: #525252;
+}
+
 #h-about {
 	color: #FFA21F;
 	/*font-size: 74px;*/
