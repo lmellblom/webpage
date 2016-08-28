@@ -1,350 +1,79 @@
-html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  line-height: 1.42857143;
-  height:100%;
-}
-
-body {
-  color: #333;
-  margin: 0px;
-  /*background-image: url("pics/water.jpg");*/
-  background-color: white;
-  height:100%;
-}
-
-h1 {
-  margin: 0.0em 0 0.35em 0;
-  font-family: 'Josefin Sans', sans-serif !important;
-}
-
-p {
-  font-weight: 200;
-  margin-top:5px;
-  margin-left:5px;
-}
-
-
-.imgHeader {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  display: inline-block;
-  vertical-align: middle;
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .jumbotron p {
-  width: 80%;
-  text-align: center;
-  margin: auto auto;
+	font-size: 13px;
+	line-height: 1.5em;
+}
+
+.jumbotron p i {
+	color: #FFA21F;
+}
+
+#h-about {
+	color: #FFA21F;
+	/*font-size: 74px;*/
+	width: 100%;
+	text-align: center;
 }
 
 .jumbotron {
-    padding-top: 50px !important;
-}
-
-/* For the text that is about education */
-#wrapper-utbildning .even {
-  background-color: #FC6E51;
-}
-#wrapper-utbildning .odd {
-  background-color: #E9573F;
-}
-#wrapper-utbildning {
-    min-height: 100%;
-    height: 
-}
-.utbildning{
-  text-align: center;
-  margin:0px;
-  min-height: 100px;
-}
-.utbildning p {
-  margin:0px;
-  padding-top:10px;
-}
-
-/* CV */
-#wrapper-cv .even {
-  background-color: #4FC1E9;
-}
-#wrapper-cv{
-    min-height: 100%;
-}
-#wrapper-cv .odd {
-  background-color: #3BAFDA;
-}
-.cv{
-  margin:0px;
-  min-height: 100px;
-  padding-left: 10px;
-  clear: both;
-}
-.cv p {
-  padding-bottom: 5px;
-}
-
-#wrapper-cv .year {
-  float: right !important;
-  padding-right: 10px;
-}
-.year{
-  font-style: italic;
-}
-.year-last {
-  padding-bottom: 10px;
-}
-
-
-
-h2 {
-  margin:0px;
-  padding-top: 10px;
-}
-
-/* The contact on the page */
-#wrapper-om {
-  text-align: center;
-  padding-bottom: 10px;
-  background-color: rgba(238,238,238,1.0) ; /*#eee*/
-  min-height: 100%;
-
-
-} 
-
-#wrapper-kurser {
-    text-align: center;
-  padding-bottom: 10px;
-  background-color: rgba(238,238,238,1.0) ; /*#eee*/
-  min-height: 100%;
-}
-
-.courses div{
-  text-align: left;
-  font-weight: 200;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  line-height: 1.42857143;
-  padding: 10px 0px;
-}
-.kurser-content {
-  padding: 20px 50px;
-  overflow: hidden;
-  margin-bottom: 0px;
-  text-align: justify;
-}
-
-/* The contact on the page */
-#wrapper-kontakt {
-  text-align: center;
-  padding-bottom: 10px;
-  background-color: rgba(238,238,238,1.0) ; /*#eee*/
-  min-height: 100%;
-
-
-} 
-#wrapper-kontakt .kontakt {
-  display: inline-block;
-  margin: 10px;
-}
-.kontakt {
-  text-align: center;
-}
-
-/*
-.kontakt img {
-  width: 45px;
-  height: 45px;
-}
-*/
-/* Make other look and feel of some bootstrap */
-#frontPageImg{
-  margin-bottom: 20px;
-
-}
-
-#nav {
-  opacity: 0.5;
-}
-
-#frontPageImg img{
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
-}
-
-.jumbotron {
-  margin-top:0px;
-  padding: 20px;
-  margin-bottom: 0px;
-  color: inherit;
-  background-color: rgba(238,238,238,1.0) ; /*#eee*/
-  /*background-image: url("pics/water.jpg");*/
-
-  text-align: center;
-  min-height: 100%;
-
-}
-.jumbotron h1,
-.jumbotron .h1 {
-  color: inherit;
-  margin-top: 4%;
-}
-.jumbotron p {
-  margin-bottom: 15px;
-  font-size: 16px; /*EDIT*/
-}
-
-/*  About the projects */
-.project {
-  padding: 20px 50px;
-  background-color: #e4e4e4;
-  overflow: hidden;
-  margin-bottom: 0px;
-  vertical-align: middle;
-}
-
-
-.project p {
-        text-align: justify;
-}
-
-.project img {
-  height: 150px;
-  width: 150px;
-
-}
-#wrapper-project {
-    min-height: 100%;
-}
-#wrapper-project .even {
-/*  background-color: #8D8D8D; #48CFAD;*/
-  background-color: rgba(0,0,0,0.1);
-}
-#wrapper-project .odd {
- /* background-color: #C2C2C2; #37BC9B;*/
- background-color: rgba(0,0,0,0.3)
-}
-.project-last {
-  margin-bottom: 0px !important;
-}
-.keyWords{
-  font-weight: bold;
-}
-
-/* Stuff that applies to all imageds, the header between the different categories*/
-.header {
-  background-color: #656D78;
-  font-family: 'Josefin Sans', sans-serif !important;
-  text-align: center;
-  font-size: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  clear:both;
-}
-.even img {
-  margin-right: 20px;
-  float: left !important;
-}
-.odd img {
-  margin-left: 20px;
-  float: right !important;
+	height: 100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin: 0px;
+	border-radius: 0px;
 }
 
 .content {
-    height: 100%;
+	width: 70%;
+	text-align: justify;
 }
 
-a.downButton {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    width: 40px;
-    margin-left: -20px;
-    font-size: 40px;
+.picMe {
+    margin-bottom: 40px;
     text-align: center;
 
-    -webkit-transition: bottom 0.1s ease-in-out;
-    -moz-transition: bottom 0.1s ease-in-out;
-    -ms-transition: bottom 0.1s ease-in-out;
-    -o-transition: bottom 0.1s ease-in-out;
-    transition: bottom 0.1s ease-in-out;
-    -webkit-transition: color 0.3s ease-in-out;
-    -moz-transition: color 0.3s ease-in-out;
-    -ms-transition: color 0.3s ease-in-out;
-    -o-transition: color 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out;
-    color: #555555; }
-a.downButton:hover {
-      color: #6e6e6e; 
 }
 
-
-#wrapper-kontakt .contact-content{
-/*    top: 50%;
-    left: 50%;
-    width: 50%;
-    margin: -15% 0 0 -25%;*/
-    margin-top: 20%;
-    padding: 0px 50px;
-
-  }
-
-
-@media screen and (max-height: 400px) {
-    #frontPageImg {
-    display: none;
-  }
+.picMe img {
+	max-height: 300px;
+	display: inline-block;
 }
 
-@media screen and (max-width: 768px) {
-  .jumbotron p {
-    width: 80%;
-    text-align: justify;
-      margin: auto auto;
-
-  }
-  .imgHeader {
-    display: block;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+#header {
+	/*background-image: url("../img/water.jpg");*/
+	background-repeat: repeat;
 }
 
- /* CSS for smaller screens, small changes in layot etc. */ 
-@media screen and (max-width: 475px) {
-  .project img {
-
-    float: none !important;
-    clear: both !important;
-    margin-left: 25%;
-    text-align: center;
-  }
-
-
-
-  .project {
-    padding: 20px;
-  }
-  .project p {
-        text-align: justify;
+.back1 {
+	background-image: url("../img/back1.png");
+	background-repeat: repeat;
 }
 
-
- /* .project p:not(.keyWords) {
-    display: none;
-  }
-  .keyWords {
-    font-weight: normal;
-  }*/
+.back2 {
+	background-image: url("../img/back2.png");
+	background-repeat: repeat;
 }
 
-/* Nice colors:
-GRAPEFRUIT: #ED5565, #DA4453
-BITTERSWEET: #FC6E51, #E9573F
-MINT #48CFAD, #37BC9B <- FIN!!
-AQUA: #4FC1E9, #3BAFDA
-PINK ROSE #EC87C0, #D770AD
-MEDIUM GRAY #CCD1D9, #AAB2BD
-LIGHT GRAY #F5F7FA, #E6E9ED
-DARK GRAY #656D78, #434A54*/
+.back3 {
+	background-image: url("../img/back3.png");
+	background-repeat: repeat;
+}
+
+.stardust {
+	background-image: url("../img/stardust.png");
+	background-repeat: repeat;
+	color: #F0F0F0;
+}
+
+.jumbotron h1 {
+	text-transform: uppercase;
+}
+

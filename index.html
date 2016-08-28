@@ -1,151 +1,66 @@
 <!DOCTYPE html>
-<html lang="sv">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Linnéa Mellblom</title>
 
-	<!-- More nicer colors -->
-	<link rel="stylesheet" href="node_modules/colors.min.css">
+    <!-- Bootstrap -->
+    <script src="js/modernizr.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/rotatingWords.css">
 
-	<!-- Bootstrap stuff! -->
-	<link rel="stylesheet" href="css/paper-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <section class="jumbotron" class="rw-wrapper">
+        <h2 class="rw-sentence">
+           <span>Hej och välkommen!</span>
+          <br />
+          <span>Jag är </span>
+          <!-- <span>Jag är </span> -->
+          <div class="rw-words rw-words-1">
+            <span>Linnéa Mellblom.</span>
+            <span>en civilingenjör.</span>
+            <span>en fotbollsspelare.</span>
+            <span>en positiv tjej.</span>
+            <span>alltid nyfiken.</span>
+            <span>systemutvecklare.</span>
+          </div>
+          <br />
+        </h2>
+      </section>
 
-	<!-- Angular components -->
-	<script src="bower_components/angular.min.js"></script>
-    <script src="bower_components/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/angular-animate.js"></script>
+      <div class="jumbotron stardust">
+        <div class="content">
+          <div class="row">
+            <div class="col-lg-3 picMe">
+              <img src="img/nea.jpg" class="img-circle img-fluid" alt="Responsive image">
+            </div>
+          <div class="col-lg-9">
+          <h4><i class="fa fa-female"></i>  Hello, it's me!</h4>
+          <p><i>Vem är Linnéa Mellblom?</i> Jag är en positiv och glad person som alltid är nyfiken på nya kunskaper. Har en förkärlek för att lösa problem, hacka kod och sparka på en boll.</p><p>Avslutade mina studier till <i>civilingenjör i medieteknik</i> på Linköpings Universitet i juni 2016 och jobbar nu som utvecklare! Kan ju inte bli bättre!.</p>
+          </div>
+        </div>
+      </div>
+      </div>
 
-	<!-- Nice icons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
-
-	<!-- My custom css for this site -->
-	<link rel="stylesheet" href="css/style2.css">
-	
-	<title>Linnéa Mellblom</title>
-</head> 
-
-<body ng-app="meInfo" ng-controller="meCtrl">
-
-	<div class="bigHeader">
-		<h1 class="js-fht">LINNÉA MELLBLOM</h1>
-		<h2 class="js-fht italicTrans upperCase">Studerar Civilingenjör i Medieteknik på Linköpings Universitet. Examen 2016.</h2>
-	</div>
-
-	<div class="content">
-		<div class="row" id="aboutMe">
-			<div class="col-sm-4" id="personalInformation">
-				<img class="img-responsive img-circle" ng-src="pics/me.jpg" alt="Linnéa">
-			</div>
-			<div class="col-sm-8" id="aboutMeParagraph">
-				<p>{{aboutMe}}</p>
-			</div>
-		</div>
-
-		<hr>
-
-		<div id="projects">
-			<h4 id="projectHeader" ng-click="projects.isCollapsed = !projects.isCollapsed"><i class="fa fa-laptop"></i> Projekt <i ng-show="projects.isCollapsed" class="fa fa-angle-down"></i>
-				<i ng-hide="projects.isCollapsed" class="fa fa-angle-up"></i>
-			</h4>
-
-			<p>Spännande projekt som jag gjort antingen själv eller med härliga kamrater.</p>
-
-			<div collapse="projects.isCollapsed">
-				<!--<div class="row">-->
-					<div class="oneProject" ng-repeat="item in projects">
-						<hr>
-						<div class="row">
-							<div class="col-sm-4">
-								<a ng-href="{{homeLink(item)}}" target="_blank"><img class="projectImage img-circle img-responsive" ng-src="pics/project/{{item.img}}"></a>
-							</div>
-							<div class="col-sm-8">
-								<h5>{{item.header}}</h5>
-								<p class="keywords">{{item.keyword}}</p>
-								<p>{{item.text}}</p>
-
-								<div ng-if="item.extra">
-								<p class="extraText"><i ng-if="item.extra" class="fa fa-trophy"></i> {{item.extra}}</p>
-								<center> <p class="awardText" ng-if="item.extraPic">Tredje plats i <img ng-src="pics/{{item.extraPic}}"> 2015!</p></center>
-								</div>
-
-								<center>
-								<a ng-if="item.page" ng-href="{{item.page}}" target="_blank"><i class="fa fa-3x fa-home"></i></a>
-								<a ng-if="item.github" ng-href="{{item.github}}" target="_blank"><i class="fa fa-3x fa-github"></i></a>
-								<a ng-if="item.youtube" ng-href="{{item.youtube}}" target="_blank"><i class="fa fa-3x fa-youtube"></i></a>
-								<a ng-if="item.pdf" ng-href="pdf/{{item.pdf}}" target="_blank"><i class="fa fa-3x fa-file-pdf-o"></i></a>
-								
-								</center>
-							</div>
-						</div>
-					</div>
-			</div>
-
-		<hr>
-
-		<div id="courses">
-
-			<h4 id="courseHeader" ng-click="courses.isCollapsed = !courses.isCollapsed">
-				<i class="fa fa-book"></i> Lästa kurser 
-				<i ng-show="courses.isCollapsed" class="fa fa-angle-down"></i>
-				<i ng-hide="courses.isCollapsed" class="fa fa-angle-up"></i>
-			</h4>
-
-			<p>Kurser som jag läst under utbildningen civilingenjör i medieteknik på Linköpings universitet, Norrköping. (<i>11-pågående</i>)</p><p><i>Om inget annat anges så avser kursen 6hp.</i></p>
-
-			<div collapse="courses.isCollapsed">
-  			<div class="row row-eq-height" ng-repeat="rows in chunkedData">
-  				<div class="col-xs-6 well well-sm" ng-repeat="item in rows">
-  					<div class="row">
-  						<div class="col-sm-3"><b>{{item.code}}</b> </div>
-  						<div class="col-sm-9">{{item.name}}</div>
-  					</div>
-  					
-  				</div>
-			</div>
-		</div>
+<!--       <section class="jumbotron back3">
+        <div class="content">
+        <h1>Kontakt</h1>
+        <p>Du får gärna höra av dig till <a href="mailto:linnea@mellblom.nu?Subject=Hello" target="_blank"><i class="fa fa-envelope-o"></i> min mail</a>. Jag finns även på <a href="http://www.github.com/lmellblom" target="_blank"><i class="fa fa-github"></i> GitHub</a> och <a href="https://www.linkedin.com/pub/linn%C3%A9a-mellblom/a3/909/241" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>.</p> </p>
+      </div>
+      </section> -->
 
 
-		</div>
-
-		<hr>
-
-		<div id="contact">
-			<h4><i class="fa fa-paper-plane-o"></i> Kontakt</h4>
-
-			<p>Om du vill ha mitt CV som <i class="fa fa-file-pdf-o"> pdf</i>, så är det bara att du höra av dig till <a href="mailto:linnea@mellblom.nu?Subject=Hello" target="_blank"><i class="fa fa-envelope-o"></i> min mail</a> och gärna om du undrar över något annat. Kika annars in på mitt <a href="http://www.linneamellblom.se/cv" target="_blank">onlineCV</a>. Jag finns även på <a href="http://www.github.com/lmellblom" target="_blank"><i class="fa fa-github"></i> GitHub</a> och <a href="https://www.linkedin.com/pub/linn%C3%A9a-mellblom/a3/909/241" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>.</p> 
-			
-			<h5 class="js-fht upperCase">På återseende!</h5>
-		</div>
-		
-
-	</div>
-
-
-	<!-- Get angular data -->
-	<script type="text/javascript" src="meInfo.js"></script>
-
-	<!-- Handle the text that will take up all the space in horizontal line. Only for headings and other nice stuff, not p. -->
-	<script src="node_modules/fitter-happier-text.js"></script>
-	<script>
-		var headings = document.querySelectorAll('.js-fht');
-		fitterHappierText(headings, { baseline: 11, paddingY: 2 });
-	</script>
-
-	<!-- Handle the scrolling down smooth -->
-	<script>
-		$('a[data-toggle="scrollDown"]').click(function(event){
-			event.preventDefault();
-			$('html,body').animate({
-				scrollTop:$(this.hash).offset().top-10}, 600); // minus 50 pga menun som sittar fast! kanske kan ändra på ngt sätt??
-		});
-
-		$('body').scrollspy({ target: '.navbar-default' })
-	</script>
-
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400|Source+Sans+Pro:300,300i" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+  </body>
 </html>
