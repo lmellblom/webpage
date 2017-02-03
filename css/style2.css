@@ -1,0 +1,122 @@
+body, html {
+	height: 100%;
+		font-family: 'Source Sans Pro', sans-serif;
+}
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back1 {
+	    /* The image used */
+    background-image: url("../img/stardust.png");
+    background-repeat: repeat !important;
+    /* Set a specific height */
+    min-height: 100%; 
+
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+}
+
+.links a{
+		padding-left: 10px;
+		padding-right: 10px;
+}
+
+.back2 {
+	    /* The image used */
+    background-image: url("../img/water.jpg");
+    background-repeat: repeat !important;
+
+    /* Set a specific height */
+    min-height: 300px; 
+}
+
+.soccer {
+	min-height: 400px;
+	background-image: url("../img/fotboll.jpg");
+
+}
+
+.team {
+	min-height: 450px;
+	background-image: url("../img/team.jpg");
+
+}
+
+.linnea {
+	min-height: 100%;
+	background-image: url("../img/sida.jpg");
+	background-position: right top !important;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+
+}
+
+.max-width {
+	text-align: center;
+	max-width: 470px;
+}
+
+.quote {
+	font-style: italic;
+	color: #404040;
+	padding: 20px;
+	font-size: 13px;
+}
+
+.accent-color {
+	color: #1abc9c !important;
+}
+
+.linnea-info {
+	min-height: 70%;
+    padding: 40px;
+    background-color: #ecf0f1;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-image: url(../img/back3.png);
+}
+
+.info-content {
+	background-color: #ecf0f1;
+	padding: 40px;
+	height: 300px;
+	display: flex;
+	display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-image: url(../img/back3.png);
+}
+
+.header-name {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 48px;
+	font-family: 'Lato';
+	color: white;
+}
+
+.sub-header {
+	font-style: italic;
+	color: white;
+	font-size: 15px;
+	font-family: 'Source Sans Pro', sans-serif;
+
+}
