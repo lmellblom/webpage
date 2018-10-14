@@ -92,14 +92,27 @@ class Count {
 
 var pressedButton = false;
 function startConfetti() {
+    if (detectmob) {
+        return;
+    }
+
     if (!pressedButton){
         pressedButton = true;
         for (var i = 0; i < 250; i++) {
             create(i);
           }
     }
-
 }
+
+
+function detectmob() {
+    if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+      return true;
+    } else {
+      return false;
+    }
+ }
+
   function create(i) {
     var width = Math.random() * 8;
     var height = width * 0.4;
