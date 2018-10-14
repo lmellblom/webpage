@@ -106,7 +106,7 @@ function startConfetti() {
 
 
 function detectmob() {
-    if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+    if(window.innerWidth <= 800 && window.innerHeight <= 800) {
       return true;
     } else {
       return false;
