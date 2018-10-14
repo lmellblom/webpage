@@ -92,7 +92,7 @@ class Count {
 
 var pressedButton = false;
 function startConfetti() {
-    if (detectmob) {
+    if (detectmob()) {
         return;
     }
 

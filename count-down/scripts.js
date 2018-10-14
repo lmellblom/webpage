@@ -75,7 +75,7 @@ var Count = /** @class */ (function () {
 }());
 var pressedButton = false;
 function startConfetti() {
-    if (detectmob) {
+    if (detectmob()) {
         return;
     }
     if (!pressedButton) {
