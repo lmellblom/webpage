@@ -24,23 +24,49 @@ var AddSound = /** @class */ (function () {
 var Count = /** @class */ (function () {
     function Count(date) {
         this.date = date;
+        moment.locale('sv');
     }
     Count.prototype.tick = function () {
         var _this = this;
         var to = moment(this.date);
         var duration = moment.duration(to.diff(moment()));
-        var hours = duration.get('hours');
-        var min = duration.get('minutes');
-        var sec = duration.get('seconds');
-        var days = duration.get('days');
-        this.setDays(days);
-        this.setHours(hours);
-        this.setMinutes(min);
-        this.setSeconds(sec);
+        // check if same date or not
+        var isBefore = moment().isBefore(moment(this.date), 'day');
+        if (isBefore) {
+            var hours = duration.get('hours');
+            var min = duration.get('minutes');
+            var sec = duration.get('seconds');
+            var days = duration.get('days');
+            this.setDays(days);
+            this.setHours(hours);
+            this.setMinutes(min);
+            this.setSeconds(sec);
+        }
+        else {
+            var isSame = moment().isSame(moment(this.date), 'day');
+            if (isSame) {
+                this.setIfSameDay();
+            }
+            var isAfter = moment().isAfter(moment(this.date), 'day');
+            if (isAfter) {
+                this.setIfDayHasBeen();
+            }
+        }
         // do it again 
         setTimeout(function () {
             _this.tick();
         }, 1000);
+    };
+    Count.prototype.setIfSameDay = function () {
+        this._setDocumentDisplay('count-down', 'none');
+        this._setDocumentDisplay('the-day', 'block');
+    };
+    Count.prototype.setIfDayHasBeen = function () {
+        var daySince = moment().to(this.date);
+        this._setDocumentDisplay('the-day-has-been', 'block');
+        this._setDocumentDisplay('count-down', 'none');
+        this._setDocumentDisplay('sound-surprise', 'none');
+        this._setDocumentText('past-days', daySince);
     };
     Count.prototype.setDays = function (input) {
         var value = "" + input;
@@ -69,6 +95,11 @@ var Count = /** @class */ (function () {
     Count.prototype._setDocumentText = function (id, value) {
         if (document.getElementById(id)) {
             document.getElementById(id).innerHTML = value;
+        }
+    };
+    Count.prototype._setDocumentDisplay = function (id, value) {
+        if (document.getElementById(id)) {
+            document.getElementById(id).style.display = value;
         }
     };
     return Count;

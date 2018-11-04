@@ -29,26 +29,57 @@ class Count {
 
     constructor(date: Date) {
         this.date = date;
+        moment.locale('sv');
     }
 
     tick() {
         const to = moment(this.date);
         const duration = moment.duration(to.diff(moment()));
 
-        const hours = duration.get('hours');
-        const min = duration.get('minutes');
-        const sec = duration.get('seconds');
-        const days = duration.get('days');
+        // check if same date or not
+        const isBefore = moment().isBefore(moment(this.date), 'day');
 
-        this.setDays(days);
-        this.setHours(hours);
-        this.setMinutes(min);
-        this.setSeconds(sec);
+        if (isBefore) {
+            const hours = duration.get('hours');
+            const min = duration.get('minutes');
+            const sec = duration.get('seconds');
+            const days = duration.get('days');
+    
+            this.setDays(days);
+            this.setHours(hours);
+            this.setMinutes(min);
+            this.setSeconds(sec);
+        } else {
+            const isSame = moment().isSame(moment(this.date), 'day');
+            if (isSame) {
+                this.setIfSameDay();
+            }
+
+            const isAfter = moment().isAfter(moment(this.date), 'day');
+            if (isAfter) {
+                this.setIfDayHasBeen();
+            }
+        }
 
         // do it again 
         setTimeout(() => {
             this.tick();
         }, 1000);
+    }
+
+    setIfSameDay() {
+        this._setDocumentDisplay('count-down', 'none');
+        this._setDocumentDisplay('the-day', 'block');
+    }
+
+    setIfDayHasBeen() {
+        const daySince = moment().to(this.date);
+
+        this._setDocumentDisplay('the-day-has-been', 'block');
+        this._setDocumentDisplay('count-down', 'none');
+        this._setDocumentDisplay('sound-surprise', 'none');
+
+        this._setDocumentText('past-days', daySince);
     }
 
     setDays(input: number) {
@@ -86,6 +117,12 @@ class Count {
     private _setDocumentText(id: string, value: any) {
         if(document.getElementById(id)) {
             document.getElementById(id).innerHTML = value;
+        }
+    }
+
+    private _setDocumentDisplay(id: string, value: any) {
+        if(document.getElementById(id)) {
+            document.getElementById(id).style.display = value;
         }
     }
 }

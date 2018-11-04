@@ -86,10 +86,16 @@ body {
 .count-down {
   font-family: 'Kaushan Script', cursive;
 }
+.the-day,
+.the-day-has-been {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+}
 body {
   font-family: 'Wendy One', sans-serif;
 }
-span {
+.ballon span {
   text-transform: uppercase;
 }
 .container {
@@ -197,7 +203,7 @@ span {
   content: "▲";
   font-size: 1em;
 }
-span {
+.balloon span {
   font-size: 4.8em;
   color: white;
   position: relative;
